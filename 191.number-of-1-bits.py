@@ -5,11 +5,12 @@ class Solution(object):
         :rtype: int
         """
 
-        count = 0
-        for i in range(len(bin(n))):
-            if bin(n)[i] == '1':
-                count += 1
-        return count
+        # count = 0
+        # for i in range(len(bin(n))):
+        #     if bin(n)[i] == '1':
+        #         count += 1
+        # return count
+        return bin(n).count("1")
 
 
 print(Solution().hammingWeight(3))

@@ -5,7 +5,7 @@ class Solution:
         :rtype: bool
         """
 
-        return bin(n).count("1") == 1
+        return bin(n).count("1") == 1 and n > 0
 
 
 print(Solution().isPowerOfTwo(-16))
