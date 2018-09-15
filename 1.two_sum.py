@@ -21,6 +21,4 @@ class Solution:
             dicts[v] = k
 
 
-# for i, j in enumerate(['a', 'b', 'c']):
-#     print(i, j)
-print(Solution().twoSum([3, 2], 6))
+print(Solution().twoSum([3, 3], 6))
