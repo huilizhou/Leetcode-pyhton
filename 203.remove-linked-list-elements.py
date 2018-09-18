@@ -18,29 +18,29 @@ class Solution:
         :type val: int
         :rtype: ListNode
         """
-        # dummy = ListNode(float('-inf'))
-        # dummy.next = head
+        dummy = ListNode(float('-inf'))
+        dummy.next = head
 
-        # ret, current = dummy, dummy.next
+        ret, current = dummy, dummy.next
 
-        # while current:
-        #     if current.val == val:
-        #         ret.next = current.next
-        #     else:
-        #         ret = current
-        #     current = current.next
-
-        # return dummy.next
-
-        t = ListNode(None)
-        t.next = head
-        a = t
-        while a.next:
-            if a.next.val == val:
-                a.next = a.next.next
+        while current:
+            if current.val == val:
+                ret.next = current.next
             else:
-                a = a.next
-        return t.next
+                ret = current
+            current = current.next
+
+        return dummy.next
+
+        # t = ListNode(None)
+        # t.next = head
+        # a = t
+        # while a.next:
+        #     if a.next.val == val:
+        #         a.next = a.next.next
+        #     else:
+        #         a = a.next
+        # return t.next
 
 
 l = ListNode(1)

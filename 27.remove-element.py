@@ -8,6 +8,8 @@ class Solution:
 
         while val in nums:
             nums.remove(val)
+
+        # print(nums)
         return len(nums)
 
         # 人家的解法
