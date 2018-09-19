@@ -16,7 +16,7 @@ class Solution:
         :rtype: ListNode
         """
 
-        # # 这个是小强哥github上的，我没有看懂。
+        # # 这个是小强哥github上的，20180919看懂了。
         dummy = ListNode(float('-inf'))
 
         while head:

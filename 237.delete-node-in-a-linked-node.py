@@ -13,3 +13,10 @@ class Solution:
         """
         node.val = node.next.val
         node.next = node.next.next
+
+        # 人家的想法
+        # if node and node.next:
+        #     node_to_delete = node.next
+        #     node.val = node_to_delete.val
+        #     node.next = node_to_delete.next
+        #     del node_to_delete
