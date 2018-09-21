@@ -8,18 +8,20 @@ class Solution(object):
         # for i in nums:
         #     if nums.count(i) == 1:
         #         return i
-        nums.sort()
 
-        for i in range(len(nums) - 1):
-            if (nums[i] != nums[i + 1] and nums[i] != nums[i - 1]):
-                return nums[i]
-        return nums[len(nums) - 1]
+        # 我的第二种想法，排序，然后判断与前后均不同的即是，参考别人的。
+        # nums.sort()
 
-        # # 0异或任何数不变，任何数与自己异或为0。
-        # res = 0
-        # for i in nums:
-        #     res ^= i
-        # return res
+        # for i in range(len(nums) - 1):
+        #     if (nums[i] != nums[i + 1] and nums[i] != nums[i - 1]):
+        #         return nums[i]
+        # return nums[len(nums) - 1]
+
+        # 0异或任何数不变，任何数与自己异或为0。
+        res = 0
+        for i in nums:
+            res ^= i
+        return res
 
 
 print(Solution().singleNumber([2, 2, 1]))

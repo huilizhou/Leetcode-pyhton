@@ -21,6 +21,7 @@ class Solution(object):
                 return nums[i]
         return nums[len(nums) - 1]
 
+
         # # 人家的解法，只有1个数出现1次，余数均出现3次。针对此情况最优
         # return (sum(set(nums)) * 3 - sum(nums)) // 2
 print(Solution().singleNumber([2, 2, 2, 1]))

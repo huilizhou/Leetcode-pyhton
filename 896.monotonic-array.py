@@ -14,6 +14,8 @@ class Solution:
         #     if (not inc and not dec):
         #         break
         # return inc or dec
+
+        # 我的想法
         return A == sorted(A) or A == sorted(A, reverse=True)
 
 
