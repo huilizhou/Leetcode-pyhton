@@ -34,7 +34,7 @@ class Solution(object):
         # ans += self.preorderTraversal(root.left)
         # ans += self.preorderTraversal(root.right)
 
-        return ans
+        # return ans
 
 
 tree = TreeNode(1)

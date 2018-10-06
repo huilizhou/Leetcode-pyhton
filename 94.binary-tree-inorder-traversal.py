@@ -13,26 +13,26 @@ class Solution(object):
         :rtype: List[int]
         """
         # 递归。求中序遍历。
-        def inorder(root):
-            if not root:
-                return
+        # def inorder(root):
+        #     if not root:
+        #         return
 
-            inorder(root.left)
-            ret.append(root.val)
-            inorder(root.right)
+        #     inorder(root.left)
+        #     ret.append(root.val)
+        #     inorder(root.right)
 
-        ret = []
-        inorder(root)
+        # ret = []
+        # inorder(root)
 
-        return ret
+        # return ret
 
         # 人家的解法，递归。
-        # res=[]
-        # if root != None:
-        #     res += self.inorderTraversal(root.left)
-        #     res.append(root.val)
-        #     res += self.inorderTraversal(root.right)
-        # return res
+        res = []
+        if root != None:
+            res += self.inorderTraversal(root.left)
+            res.append(root.val)
+            res += self.inorderTraversal(root.right)
+        return res
 
 
 tree = TreeNode(1)
