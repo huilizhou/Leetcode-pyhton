@@ -16,7 +16,7 @@ class Solution:
         else:
             return 0
 
-# // github强哥的
+# // github
 # class Solution:
 #     def reverse(self, x):
 #         """
