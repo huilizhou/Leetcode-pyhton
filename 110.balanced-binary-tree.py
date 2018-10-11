@@ -43,9 +43,10 @@ class Solution(object):
             return True
 
 
+# root = None
 root = TreeNode(2)
 root.left = TreeNode(4)
 root.right = TreeNode(8)
-# root.left.left = TreeNode(11)
-# root.left.left.right = TreeNode(2)
+root.left.left = TreeNode(11)
+root.left.left.right = TreeNode(2)
 print(Solution().isBalanced(root))
