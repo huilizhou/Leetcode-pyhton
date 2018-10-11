@@ -10,7 +10,6 @@ class Solution:
             if target - value in nums:
                 if index != nums.index(target - value):
                     return index, nums.index(target - value)
-
         return 0
 
         # dicts = {}
