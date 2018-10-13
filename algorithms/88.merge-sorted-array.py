@@ -8,6 +8,7 @@ class Solution(object):
         :rtype: void Do not return anything, modify nums1 in-place instead.
         """
         # 人家的解法
+        # 若 m和n均不为0
         last, i, j = m + n - 1, m, n
         while i >= 0 and j >= 0:
             if nums1[i] > nums2[j]:
@@ -28,3 +29,18 @@ class Solution(object):
         # nums.sort()
         # for j in range(m + n):
         #     nums1[j] = nums[j]
+
+        # 人家的解法
+        # for i in range(m + n - 1, -1, -1):
+        #     if n < 1:
+        #         break
+        #     elif m < 1:
+        #         nums1[i] = nums2[n - 1]
+        #         n -= 1
+        #     else:
+        #         if nums1[m - 1] > nums2[n - 1]:
+        #             nums1[i] = nums2[m - 1]
+        #             m -= 1
+        #         else:
+        #             nums1[i] = nums2[n - 1]
+        #             n -= 1
