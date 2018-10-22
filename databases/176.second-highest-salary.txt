@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select Max(Salary) as SecingHighestSalary from Employee where Salary <(select Max(Salary)from Employee);
