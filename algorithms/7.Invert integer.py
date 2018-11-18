@@ -10,13 +10,13 @@ class Solution:
         if x >= 0:
             result = int(str(x)[::-1])
         else:
-            result = -int(str(x)[::-1])
+            result = -int(str(abs(x))[::-1])
         if abs(result) <= pow(2, 31):
             return result
         else:
             return 0
 
-# // github
+# // 小强哥的方法
 # class Solution:
 #     def reverse(self, x):
 #         """
@@ -31,21 +31,5 @@ class Solution:
 
 # print(Solution().reverse(-120))
 
-# class Solution:
-#     def reverse(self, x):
-#         """
-#         :type x: int
-#         :rtype: int
-#         """
-#         ret = 0
-#         if x >= 0:
-#             ret = int(str(x)[::-1])
-#         else:
-#             ret = -int(str(abs(x))[::-1])
-#         if -pow(2, 31) < ret < pow(2, 31) - 1:
-#             return ret
-#         else:
-#             return 0
 
-
-print(Solution().reverse(153423646))
+print(Solution().reverse(-12))
