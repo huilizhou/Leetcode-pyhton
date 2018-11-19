@@ -17,4 +17,4 @@ class Solution(object):
         return max_length
 
 
-print(Solution().lengthOfLongestSubstring("abcasabde"))
+print(Solution().lengthOfLongestSubstring(""))
