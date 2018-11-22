@@ -7,9 +7,12 @@
 # for i, v in enumerate(pos_dict):
 #     print(i, v)
 
-L = ["flower", "flow", "flight"]
-print(min(L))
-print(max(L))
+# L = ["flower", "flow", "flight"]
+# print(min(L))
+# print(max(L))
 
+
+str = "aner"
+print(list(str))
 
 # print(ord("f"))
