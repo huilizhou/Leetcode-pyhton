@@ -74,4 +74,4 @@ class Solution(object):
 #         return result
 
 
-print(Solution().threeSum([-1, -1, -3]))
+print(Solution().threeSum([-1, -1, -3, 3, 4, 5, 3, 0, 1]))

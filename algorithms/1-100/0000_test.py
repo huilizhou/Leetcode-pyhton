@@ -15,7 +15,7 @@
 # str = "aner"
 # print(list(str))
 
-res = [i for i in "abc"]
+nums = [1, 23, 4]
+print(nums.index(1))
 
-print(res)
 # print(ord("f"))
