@@ -6,7 +6,7 @@ class Solution:
         :type target: int
         :rtype: int
         """
-        # 我的想法
+        # 我的想法,双指针的想法还是不太熟练
         nums.sort()
         closestnum = nums[0] + nums[1] + nums[2]
         for i in range(len(nums) - 2):

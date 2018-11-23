@@ -12,7 +12,10 @@
 # print(max(L))
 
 
-str = "aner"
-print(list(str))
+# str = "aner"
+# print(list(str))
 
+res = [i for i in "abc"]
+
+print(res)
 # print(ord("f"))
