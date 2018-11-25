@@ -1,3 +1,4 @@
+# 合并两个有序数组
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
         """
@@ -9,18 +10,18 @@ class Solution(object):
         """
         # 人家的解法
         # 若 m和n均不为0
-        last, i, j = m + n - 1, m, n
-        while i >= 0 and j >= 0:
-            if nums1[i] > nums2[j]:
-                nums1[last] = nums1[i]
-                last, i = last - 1, i - 1
-            else:
-                nums1[last] = nums2[j]
-                last, j = last - 1, j - 1
+        # last, i, j = m + n - 1, m, n
+        # while i >= 0 and j >= 0:
+        #     if nums1[i] > nums2[j]:
+        #         nums1[last] = nums1[i]
+        #         last, i = last - 1, i - 1
+        #     else:
+        #         nums1[last] = nums2[j]
+        #         last, j = last - 1, j - 1
 
-        while j >= 0:
-            nums1[last] = nums2[j]
-            last, j = last - 1, j - 1
+        # while j >= 0:
+        #     nums1[last] = nums2[j]
+        #     last, j = last - 1, j - 1
 
         # 我的想法,多开辟了空间，空间复杂度大一点。
         # nums = nums1[0:m]
@@ -44,3 +45,6 @@ class Solution(object):
         #         else:
         #             nums1[i] = nums2[n - 1]
         #             n -= 1
+
+
+print(Solution().merge(nums1=[1, 2, 3], m=3, nums2=[2, 5, 6], n=3))
