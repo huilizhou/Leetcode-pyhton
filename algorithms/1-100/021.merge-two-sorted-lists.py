@@ -21,21 +21,6 @@ class Solution:
         :type l2: ListNode
         :rtype: ListNode
         """
-        # head = ListNode(0)
-        # first = head
-        # while l1 != None and l2 != None:
-        #     if l1.val > l2.val:
-        #         head.next = l2
-        #         l2 = l2.next
-        #     else:
-        #         head.next = l1
-        #         l1 = l1.next
-        #     head = head.next
-        # if l1 == None:
-        #     head.next = l2
-        # elif l2 == None:
-        #     head.next = l1
-        # return first.next
 
         # 我的想法
         # l = []
@@ -50,6 +35,7 @@ class Solution:
         # return result
 
         curr = dummy = ListNode(0)
+
         while l1 and l2:
             if l1.val < l2.val:
                 curr.next = l1
@@ -59,6 +45,7 @@ class Solution:
                 l2 = l2.next
             curr = curr.next
         curr.next = l1 or l2
+
         return dummy.next
 
 
