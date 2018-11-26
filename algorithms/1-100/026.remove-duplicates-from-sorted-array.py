@@ -1,14 +1,12 @@
 # 删除排序数组的重复项并返回长度
 
-# 输入的是一个数组，返回的是一个值。
 
-
-# class Solution:
-#     def removeDuplicates(self, nums):
-#         """
-#         :type nums: List[int]
-#         :rtype: int
-#         """
+class Solution:
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
 #         if not nums:
 #             return
 #         l = 1
@@ -18,12 +16,7 @@
 #                 l += 1
 #         return l
 
-# class Solution:
-#     def removeDuplicates(self, nums):
-#         """
-#         :type nums: List[int]
-#         :rtype: int
-#         """
+
 #         ret = index = 0
 #         Current = None
 #         while index < len(nums):
@@ -34,13 +27,6 @@
 #             index += 1
 #         return ret
 
-
-class Solution:
-    def removeDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
         n = len(nums)
         if n == 0 or n == 1:
             return n
