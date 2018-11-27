@@ -23,30 +23,31 @@ class Solution:
         """
 
         # 我的想法
-        # l = []
-        # while(l1 != None or l2 != None):
-        #     if (l1 != None):
-        #         l.append(l1.val)
-        #         l1 = l1.next
-        #     if (l2 != None):
-        #         l.append(l2.val)
-        #         l2 = l2.next
-        # result = sorted(l)
-        # return result
-
-        curr = dummy = ListNode(0)
-
-        while l1 and l2:
-            if l1.val < l2.val:
-                curr.next = l1
+        l = []
+        while(l1 != None or l2 != None):
+            if (l1 != None):
+                l.append(l1.val)
                 l1 = l1.next
-            else:
-                curr.next = l2
+            if (l2 != None):
+                l.append(l2.val)
                 l2 = l2.next
-            curr = curr.next
-        curr.next = l1 or l2
+        result = sorted(l)
+        return result
 
-        return dummy.next
+        # 人家解法
+        # curr = dummy = ListNode(0)
+
+        # while l1 and l2:
+        #     if l1.val < l2.val:
+        #         curr.next = l1
+        #         l1 = l1.next
+        #     else:
+        #         curr.next = l2
+        #         l2 = l2.next
+        #     curr = curr.next
+        # curr.next = l1 or l2
+
+        # return dummy.next
 
 
 l1 = ListNode(1)

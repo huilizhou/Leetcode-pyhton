@@ -15,7 +15,11 @@
 # str = "aner"
 # print(list(str))
 
-nums = [1, 23, 4]
-print(nums.index(1))
+# nums = [1, 23, 4]
+# print(nums.index(1))
 
+
+L = ['a', 'b', 'c', 'b', 'a']
+s = "".join(L)
+print(s)
 # print(ord("f"))
