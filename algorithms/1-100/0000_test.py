@@ -15,11 +15,17 @@
 # str = "aner"
 # print(list(str))
 
-# nums = [1, 23, 4]
-# print(nums.index(1))
 
+# L = ['a', 'b', 'c', 'b', 'a']
+# s = "".join(L)
+# print(s)
 
-L = ['a', 'b', 'c', 'b', 'a']
-s = "".join(L)
-print(s)
 # print(ord("f"))
+
+# for i in ["eat", "tea", "tan", "ate", "nat", "bat"]:
+#     s = list(i)
+#     print(s)
+i = "acb"
+a = "".join(sorted(i))
+
+print(a)
