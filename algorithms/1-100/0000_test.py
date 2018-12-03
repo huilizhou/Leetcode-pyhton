@@ -25,7 +25,10 @@
 # for i in ["eat", "tea", "tan", "ate", "nat", "bat"]:
 #     s = list(i)
 #     print(s)
-i = "acb"
-a = "".join(sorted(i))
 
-print(a)
+# i = "acb"
+# a = "".join(sorted(i))
+
+# print(a)
+max = float("-inf")
+print(max)

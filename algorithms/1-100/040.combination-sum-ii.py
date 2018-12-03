@@ -48,4 +48,4 @@ class Solution:
         return findSum(candidates, target)
 
 
-print(Solution().combinationSum2())
+print(Solution().combinationSum2([10, 1, 2, 7, 6, 1, 5], 8))
