@@ -30,5 +30,8 @@
 # a = "".join(sorted(i))
 
 # print(a)
-max = float("-inf")
-print(max)
+# max = float("-inf")
+# print(max)
+
+matrix = [[0 for _ in range(4)]for _ in range(4)]
+print(matrix)
