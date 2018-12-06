@@ -17,7 +17,7 @@ class Solution:
         :type intervals: List[Interval]
         :rtype: List[Interval]
         """
-        # 人家的解法
+
         if len(intervals) == 0:
             return []
         intervals.sort(key=lambda x: x.start)

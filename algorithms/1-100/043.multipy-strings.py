@@ -1,3 +1,4 @@
+# 字符串相乘
 class Solution:
     def multiply(self, num1, num2):
         """
@@ -21,4 +22,4 @@ class Solution:
         return str(res)
 
 
-print(Solution().multiply("22", "32"))
+print(Solution().multiply("29", "32"))

@@ -24,12 +24,12 @@ class Solution(object):
         #     last, j = last - 1, j - 1
 
         # 我的想法,多开辟了空间，空间复杂度大一点。
-        # nums = nums1[0:m]
-        # for i in range(0, n):
-        #     nums.append(nums2[i])
-        # nums.sort()
-        # for j in range(m + n):
-        #     nums1[j] = nums[j]
+        nums = nums1[0:m]
+        for i in range(0, n):
+            nums.append(nums2[i])
+        nums.sort()
+        for j in range(m + n):
+            nums1[j] = nums[j]
 
         # 人家的解法
         # for i in range(m + n - 1, -1, -1):

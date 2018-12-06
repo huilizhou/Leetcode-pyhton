@@ -30,8 +30,13 @@
 # a = "".join(sorted(i))
 
 # print(a)
-# max = float("-inf")
-# print(max)
 
-matrix = [[0 for _ in range(4)]for _ in range(4)]
-print(matrix)
+
+# matrix = [[0 for _ in range(4)]for _ in range(4)]
+# print(matrix)
+
+
+# res = 0
+# nums2 = "23"
+# for i in range(len(nums2) - 1, -1, -1):
+#     print(nums2[i], i)
