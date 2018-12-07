@@ -40,3 +40,11 @@
 # nums2 = "23"
 # for i in range(len(nums2) - 1, -1, -1):
 #     print(nums2[i], i)
+
+n = 3
+factor = [0] * n
+# print(factor)
+factor[0] = 1
+for i in range(1, n):
+    factor[i] = factor[i - 1] * i
+print(factor)

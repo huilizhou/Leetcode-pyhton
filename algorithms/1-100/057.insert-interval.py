@@ -16,6 +16,7 @@ class Solution:
         :rtype: List[Interval]
         """
         # 我的想法。在056题基础之上，添加新的列表之后，再进行排序
+        # 算法复杂度更高，不合理
         # intervals.append(newInterval)
         # intervals.sort(key=lambda x: x.start)
         # l = intervals[0].start
