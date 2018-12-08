@@ -49,7 +49,7 @@
 #     factor[i] = factor[i - 1] * i
 # print(factor)
 
-
-import functools
-result = (lambda k: functools.reduce(int.__mul__, range(1, k + 1), 1))(5)
-print(result)
+m = 3
+n = 7
+tmp = [[1] * n] * m
+print(tmp)
