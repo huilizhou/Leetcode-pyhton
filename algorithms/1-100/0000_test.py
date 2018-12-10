@@ -49,7 +49,7 @@
 #     factor[i] = factor[i - 1] * i
 # print(factor)
 
-m = 3
-n = 7
-tmp = [[1] * n] * m
-print(tmp)
+# m = 3
+# n = 7
+# tmp = [[1] * n] * m
+# print(tmp)

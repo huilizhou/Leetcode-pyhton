@@ -1,3 +1,4 @@
+# 子集II
 class Solution:
     def subsetsWithDup(self, nums):
         """
@@ -5,8 +6,9 @@ class Solution:
         :rtype: List[List[int]]
         """
         res = [[]]
-        sorted_nums = sorted(nums)
-        for num in sorted_nums:
+        nums.sort()
+
+        for num in nums:
             for temp in res[:]:
                 x = temp[:]
                 x.append(num)
@@ -15,4 +17,4 @@ class Solution:
         return res
 
 
-print(Solution().subsetsWithDup([4, 4, 4, 1, 4]))
+print(Solution().subsetsWithDup([1, 2, 2]))

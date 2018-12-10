@@ -1,21 +1,10 @@
+# 删除排序数组的重复项II
 class Solution(object):
     def removeDuplicates(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
-        # if not nums:
-        #     return 0
-
-        # last, i, same = 0, 1, False
-        # while i < len(nums):
-        #     if nums[last] != nums[i] or not same:
-        #         same = nums[last] == nums[i]
-        #         last += 1
-        #         nums[last] = nums[i]
-        #     i += 1
-
-        # return last + 1
 
         n = len(nums)
         if (n <= 2):
@@ -31,8 +20,15 @@ class Solution(object):
                 nums[i + 1] = nums[j]
                 i += 1
             j += 1
+        return i + 1
 
-        return i + 1, nums
+        # 人家的解法
+        # i = 0
+        # for e in nums:
+        #     if i < 2 or e != nums[i - 2]:
+        #         nums[i] = e
+        #         i += 1
+        # return i
 
 
 print(Solution().removeDuplicates([1, 1, 1, 2, 2, 3, 4, 4, 4, 5, 6]))
