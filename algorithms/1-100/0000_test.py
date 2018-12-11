@@ -53,3 +53,11 @@
 # n = 7
 # tmp = [[1] * n] * m
 # print(tmp)
+
+n = 2
+res = 1
+for i in reversed(range(n + 1, 2 * n + 1)):
+    print(i)
+    res *= i
+    res /= i - n
+print(res)
