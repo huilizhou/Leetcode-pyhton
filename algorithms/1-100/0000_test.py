@@ -54,10 +54,7 @@
 # tmp = [[1] * n] * m
 # print(tmp)
 
-n = 2
-res = 1
-for i in reversed(range(n + 1, 2 * n + 1)):
-    print(i)
-    res *= i
-    res /= i - n
-print(res)
+a = [1, 2, 3, 5]
+print(a.index(5))
+a.remove(5)
+print(a)
