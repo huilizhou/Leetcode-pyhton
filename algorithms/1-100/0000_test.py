@@ -55,6 +55,6 @@
 # print(tmp)
 
 a = [1, 2, 3, 5]
-print(a.index(5))
-a.remove(5)
+b = [9, 8, 7]
+a.extend(b)
 print(a)

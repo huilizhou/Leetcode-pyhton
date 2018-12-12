@@ -5,9 +5,16 @@ class Solution:
         :rtype: void Do not return anything, modify nums in-place instead.
         """
 
-        # nums[:] = sorted(nums)
+        # 我的想法
+        # a = nums.count(0)
+        # b = nums.count(1)
+        # c = nums.count(2)
+        # nums[:a] = [0] * a
+        # nums[a:a + b] = [1] * b
+        # nums[a + b:] = [2] * c
+        # return nums
 
-        # 人家的解法，实际上就是荷兰国旗问题。
+        # # 人家的解法，实际上就是荷兰国旗问题。
         def triPartition(nums, target):
             i, j, n = 0, 0, len(nums) - 1
 

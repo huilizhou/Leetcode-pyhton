@@ -24,27 +24,13 @@ class Solution(object):
         #     last, j = last - 1, j - 1
 
         # 我的想法,多开辟了空间，空间复杂度大一点。
+        # 常规思路
         nums = nums1[0:m]
         for i in range(0, n):
             nums.append(nums2[i])
         nums.sort()
         for j in range(m + n):
             nums1[j] = nums[j]
-
-        # 人家的解法
-        # for i in range(m + n - 1, -1, -1):
-        #     if n < 1:
-        #         break
-        #     elif m < 1:
-        #         nums1[i] = nums2[n - 1]
-        #         n -= 1
-        #     else:
-        #         if nums1[m - 1] > nums2[n - 1]:
-        #             nums1[i] = nums2[m - 1]
-        #             m -= 1
-        #         else:
-        #             nums1[i] = nums2[n - 1]
-        #             n -= 1
 
 
 print(Solution().merge(nums1=[1, 2, 3], m=3, nums2=[2, 5, 6], n=3))

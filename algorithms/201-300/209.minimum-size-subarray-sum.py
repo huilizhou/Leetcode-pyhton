@@ -18,22 +18,16 @@ class Solution(object):
         return res
 
         # 我的想法
-        # left, right = 0, 0
-        # total_sum = 0
-        # res = len(nums) + 1
-        # while left < len(nums):
-        #     if right < len(nums) and total_sum < s:
-        #         total_sum += nums[right]
-        #         right += 1
-        #     else:
-        #         total_sum -= nums[left]
-        #         left += 1
-
-        #     if total_sum >= s:
-        #         res = min(res, right - left)
-        # if res == len(nums) + 1:
+        # minLen = len(nums) + 1
+        # for i, _ in enumerate(nums):
+        #     sum_all = 0
+        #     for j, tmp in enumerate(nums[i:]):
+        #         sum_all += tmp
+        #         if sum_all >= s:
+        #             minLen = min(minLen, j + 1)
+        # if minLen == len(nums) + 1:
         #     return 0
-        # return res
+        # return minLen
 
 
 print(Solution().minSubArrayLen(s=7, nums=[2, 3, 1, 2, 4, 3]))
