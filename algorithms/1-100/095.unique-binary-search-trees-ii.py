@@ -1,4 +1,7 @@
+# 不同的二叉搜索树II
 # Definition for a binary tree node.
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -39,22 +42,26 @@ class Solution:
         """
         if n == 0:
             return []
-        return self.generateTreesRecu(1, n)
+        return self.genTrees(1, n)
 
-    def generateTreesRecu(self, low, high):
-        result = []
-        if low > high:
-            result.append(None)
-        for i in range(low, high + 1):
-            left = self.generateTreesRecu(low, i - 1)
-            right = self.generateTreesRecu(i + 1, high)
-            for j in left:
-                for k in right:
-                    cur = TreeNode(i)
-                    cur.left = j
-                    cur.right = k
-                    result.append(cur)
-        return result
+    def genTrees(self, start, end):
+        res = []
+        if (start > end):
+            return [None]
+        if start == end:
+            node = TreeNode(start)
+            res.append(node)
+            return res
+        for i in range(start, end + 1):
+            lnodes = self.genTrees(start, i - 1)
+            rnodes = self.genTrees(i + 1, end)
+            for lnode in lnodes:
+                for rnode in rnodes:
+                    node = TreeNode(i)
+                    node.left = lnode
+                    node.right = rnode
+                    res.append(node)
+        return res
 
 
 print(Solution().generateTrees(3))

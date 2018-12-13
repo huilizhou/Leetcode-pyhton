@@ -53,8 +53,3 @@
 # n = 7
 # tmp = [[1] * n] * m
 # print(tmp)
-
-a = [1, 2, 3, 5]
-b = [9, 8, 7]
-a.extend(b)
-print(a)
