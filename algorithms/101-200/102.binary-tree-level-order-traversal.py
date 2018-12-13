@@ -15,43 +15,26 @@ class Solution(object):
         # 人家的解法，一层层遍历，我目前还未想到更好的解法
         if not root:
             return []
-        result, current = [], [root]
-        while current:
-            next_level, vals = [], []
-            for node in current:
-                vals.append(node.val)
-                if node.left:
-                    next_level.append(node.left)
-                if node.right:
-                    next_level.append(node.right)
-                current = next_level
-                result.append(vals)
-        return result
+        curList = [root]
+        rList = []
+        while curList:
+            tempNodeList = []
+            tempValList = []
+            for node in curList:
+                tempValList.append(node.val)
+                if node.left is not None:
+                    tempNodeList.append(node.left)
+                if node.right is not None:
+                    tempNodeList.append(node.right)
+                curList = tempNodeList
+                rList.append(tempNodeList)
+        return rList
 
-        #   人家用队列的解法
-        # res = []
-        # # 如果根节点为空，则返回空列表
-        # if root is None:
-        #     return res
-        # # 模拟一个队列储存节点
-        # q = []
-        # # 首先将根节点入队
-        # q.append(root)
-        # # 列表为空时，循环终止
-        # while len(q) != 0:
-        #     # 使用列表存储同层节点
-        #     tmp = []
-        #     # 记录同层节点的个数
-        #     length = len(q)
-        #     for i in range(length):
-        #         # 将同层节点依次出队
-        #         r = q.pop(0)
-        #         if r.left is not None:
-        #             # 非空左孩子入队
-        #             q.append(r.left)
-        #         if r.right is not None:
-        #             # 非空右孩子入队
-        #             q.append(r.right)
-        #         tmp.append(r.val)
-        #     res.append(tmp)
-        # return res
+
+tree = TreeNode(3)
+tree.left = TreeNode(9)
+tree.right = TreeNode(20)
+tree.right.left = TreeNode(15)
+tree.right.right = TreeNode(7)
+
+print(Solution().levelOrder(tree))

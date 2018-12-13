@@ -1,4 +1,7 @@
+# 二叉树的前序遍历
 # Definition for a binary tree node.
+
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -12,29 +15,14 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
-        # 递归的算法求解二叉树的先序遍历
-        def preorder(root):
-            if not root:
-                return
-
-            ret.append(root.val)
-            preorder(root.left)
-            preorder(root.right)
-
-        ret = []
-        preorder(root)
-
-        return ret
-
-        # 人家的解法
-        # ans = []
-        # if not root:
-        #     return []
-        # ans.append(root.val)
-        # ans += self.preorderTraversal(root.left)
-        # ans += self.preorderTraversal(root.right)
-
-        # return ans
+        # 我的想法，递归
+        res = []
+        if not root:
+            return res
+        res.append(root.val)
+        res += self.preorderTraversal(root.left)
+        res += self.preorderTraversal(root.right)
+        return res
 
 
 tree = TreeNode(1)
