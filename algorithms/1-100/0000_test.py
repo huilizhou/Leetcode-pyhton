@@ -48,8 +48,3 @@
 # for i in range(1, n):
 #     factor[i] = factor[i - 1] * i
 # print(factor)
-
-# m = 3
-# n = 7
-# tmp = [[1] * n] * m
-# print(tmp)
