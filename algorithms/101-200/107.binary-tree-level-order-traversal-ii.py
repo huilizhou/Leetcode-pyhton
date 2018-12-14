@@ -26,7 +26,7 @@ class Solution:
                     next_level.append(node.left)
                 if node.right:
                     next_level.append(node.right)
-                current = next_level
+            current = next_level
             result.append(vals)
         return result[::-1]
 
