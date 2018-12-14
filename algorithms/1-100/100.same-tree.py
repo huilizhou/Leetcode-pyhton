@@ -14,12 +14,6 @@ class Solution(object):
         :rtype: bool
         """
 
-        # 我的解法，不对。没有理解树的实质。
-        # if p.val == q.val and p.left==q.left and p.right== q.right:
-        #     return True
-        # else:
-        #     return False
-
         if p is None and q is None:
             return True
         if p is not None and q is not None:
