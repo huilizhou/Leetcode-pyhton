@@ -1,4 +1,7 @@
+# 平衡二叉树
 # Definition for a binary tree node.
+
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -24,7 +27,7 @@ class Solution(object):
         #     return max(left_height, right_height) + 1
         # return (getHeight(root) >= 0)
 
-        # 我的想法，根据其定义来
+        # 我的想法
         self.flag = True
 
         def maxDepth(root):
@@ -43,7 +46,6 @@ class Solution(object):
             return True
 
 
-# root = None
 root = TreeNode(2)
 root.left = TreeNode(4)
 root.right = TreeNode(8)

@@ -23,16 +23,16 @@ class Solution:
         """
 
         # 我的想法
-        l = []
-        while(l1 != None or l2 != None):
-            if (l1 != None):
-                l.append(l1.val)
-                l1 = l1.next
-            if (l2 != None):
-                l.append(l2.val)
-                l2 = l2.next
-        result = sorted(l)
-        return result
+        # l = []
+        # while(l1 != None or l2 != None):
+        #     if (l1 != None):
+        #         l.append(l1.val)
+        #         l1 = l1.next
+        #     if (l2 != None):
+        #         l.append(l2.val)
+        #         l2 = l2.next
+        # result = sorted(l)
+        # return result
 
         # 人家解法
         # curr = dummy = ListNode(0)
@@ -48,6 +48,18 @@ class Solution:
         # curr.next = l1 or l2
 
         # return dummy.next
+
+        # 人家的解法，采用递归的思想
+        # if l1 == None:
+        #     return l2
+        # if l2 == None:
+        #     return l1
+        # if l1.val < l2.val:
+        #     l1.next = self.mergeTwoLists(l1.next, l2)
+        #     return l1
+        # else:
+        #     l2.next = self.mergeTwoLists(l1, l2.next)
+        #     return l2
 
 
 l1 = ListNode(1)
