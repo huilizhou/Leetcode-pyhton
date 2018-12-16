@@ -1,3 +1,4 @@
+# 杨辉三角
 class Solution(object):
     def generate(self, numRows):
         """
@@ -11,6 +12,7 @@ class Solution(object):
         #     res += [map(lambda x, y: x + y, res[-1] + [0], [0] + res[-1])]
         # return res[:numRows]
 
+        # 我的想法
         res = []
         for i in range(numRows):
             res.append([1] * (i + 1))

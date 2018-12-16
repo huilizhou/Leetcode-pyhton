@@ -1,3 +1,4 @@
+# 验证回文串
 class Solution:
     def isPalindrome(self, s):
         """
