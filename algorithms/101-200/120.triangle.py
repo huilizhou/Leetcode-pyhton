@@ -1,10 +1,11 @@
+# 三角形最小路径和
 class Solution:
     def minimumTotal(self, triangle):
         """
         :type triangle: List[List[int]]
         :rtype: int
         """
-        # 我的解法，动态规划
+        # 我的解法，动态规划。倒序
         for i in range(len(triangle) - 2, -1, -1):
             for j in range(len(triangle[i])):
                 triangle[i][j] += min(triangle[i + 1][j],
