@@ -30,8 +30,8 @@ class Solution:
                 while current_num + 1 in num_set:
                     current_num += 1
                     current_streak += 1
+                longest_streak = max(longest_streak, current_streak)
 
-            longest_streak = max(longest_streak, current_streak)
         return longest_streak
 
         # 我的想法。算法的时间复杂度O(nlogn)
