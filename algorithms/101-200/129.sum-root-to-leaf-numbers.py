@@ -1,4 +1,7 @@
+# 求根到叶子结点数字之和
 # Definition for a binary tree node.
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x

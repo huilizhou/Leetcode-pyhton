@@ -1,3 +1,4 @@
+# 最长连续序列
 class Solution:
     def longestConsecutive(self, nums):
         """
