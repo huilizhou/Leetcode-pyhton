@@ -21,4 +21,4 @@ class Solution(object):
         return res
 
 
-print(Solution().generate(3))
+print(Solution().generate(2))

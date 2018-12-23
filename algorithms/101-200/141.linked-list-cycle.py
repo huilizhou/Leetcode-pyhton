@@ -14,6 +14,7 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
+        # 双指针法，我的想法
         fast, slow = head, head
 
         while fast and fast.next:
