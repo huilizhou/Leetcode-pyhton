@@ -1,3 +1,4 @@
+# 旋转数组
 class Solution(object):
     def rotate(self, nums, k):
         """
@@ -5,5 +6,6 @@ class Solution(object):
         :type k: int
         :rtype: void Do not return anything, modify nums in-place instead.
         """
-        # 我一开始没有写nums[:]
-        nums[:] = nums[k + 1:] + nums[:k + 1]
+        # 我的想法
+        k = k % len(nums)
+        nums[:] = nums[len(nums) - k:] + nums[:len(nums) - k]
