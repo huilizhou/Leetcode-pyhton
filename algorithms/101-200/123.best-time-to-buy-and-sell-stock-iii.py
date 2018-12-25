@@ -59,18 +59,41 @@ class Solution:
         # return shell2
 
         # 人家更加通俗的解法，低位买进，高位卖出
-        a1 = a2 = -float("inf")
-        b1 = b2 = 0
-        for price in prices:
-            if a1 < -price:
-                a1 = -price
-            if b1 < price + a1:
-                b1 = price + a1
-            if a2 < b1 - price:
-                a2 = b1 - price
-            if b2 < a2 + price:
-                b2 = a2 + price
-        return b2
+        # a1 = a2 = -float("inf")
+        # b1 = b2 = 0
+        # for price in prices:
+        #     if a1 < -price:
+        #         a1 = -price
+        #     if b1 < price + a1:
+        #         b1 = price + a1
+        #     if a2 < b1 - price:
+        #         a2 = b1 - price
+        #     if b2 < a2 + price:
+        #         b2 = a2 + price
+        # return b2
+
+        # 我理解完之后的写法
+        if len(prices) < 2:
+            return 0
+        n = len(prices)
+        dp1 = [0] * n
+        dp2 = [0] * n
+        # minval记录在第i天之前(含第i天)prices最小的那一天买进
+        minval = prices[0]
+        # maxval记录在第i天之后(含第i天)prices最大的那一天卖出
+        maxval = prices[-1]
+
+        # 前向
+        for i in range(1, n):
+            dp1[i] = max(dp1[i - 1], prices[i] - minval)
+            minval = min(minval, prices[i])
+        # 后向
+        for i in range(n - 2, -1, -1):
+            dp2[i] = max(dp2[i + 1], maxval - prices[i])
+            maxval = max(maxval, prices[i])
+
+        dp = [dp1[i] + dp2[i] for i in range(n)]
+        return max(dp)
 
 
 print(Solution().maxProfit([3, 3, 5, 0, 0, 3, 1, 4]))

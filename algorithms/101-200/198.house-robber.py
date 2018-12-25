@@ -24,7 +24,7 @@ class Solution(object):
         # if nums == []:
         #     return 0
         # if len(nums) == 1:
-        #     return max(nums)
+        #     return nums[0]
         # dp = [0] * len(nums)
         # dp[0] = nums[0]
         # dp[1] = max(nums[1], nums[0])
