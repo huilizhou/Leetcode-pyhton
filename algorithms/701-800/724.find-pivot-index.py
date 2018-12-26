@@ -5,12 +5,6 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        # 我的想法超出了时间限制
-        # for i in range(len(nums)):
-        #     if sum(nums[:i]) == sum(nums[i + 1:]):
-        #         return i
-        #     continue
-        # return -1
 
         # 人家的写法
         # if (len(nums)) < 3:
