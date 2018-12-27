@@ -27,5 +27,9 @@
 # print(f)
 
 
-x = [2, 1]
-print(x.index(max(x)))
+# x = [2, 1]
+# print(x.index(max(x)))
+
+
+a = {1, 2, 3, 4, 5, 6}
+print(a)

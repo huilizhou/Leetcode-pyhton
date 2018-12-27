@@ -1,3 +1,1 @@
-
-a = sum(range(101))
-print(a)
+print(5 & 7)

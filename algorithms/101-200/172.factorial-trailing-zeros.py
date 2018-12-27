@@ -14,4 +14,4 @@ class Solution:
         return count
 
 
-print(Solution().trailingZeroes(0))
+print(Solution().trailingZeroes(15))
