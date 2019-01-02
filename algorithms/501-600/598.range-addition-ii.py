@@ -1,3 +1,4 @@
+# 范围求和II
 class Solution:
     def maxCount(self, m, n, ops):
         """
@@ -6,7 +7,7 @@ class Solution:
         :type ops: List[List[int]]
         :rtype: int
         """
-        # 思路，实际上就是ops的最小范围中的个数
+        # 思路，实际上就是ops的最小范围里的个数
         # 人家的写法
         # return min(i[0] for i in ops) * min(i[1] for i in ops) if ops else m * n
 
