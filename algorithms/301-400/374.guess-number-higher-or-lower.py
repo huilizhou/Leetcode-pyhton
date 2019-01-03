@@ -12,9 +12,11 @@ class Solution(object):
         """
         left, right = 1, n
         while left <= right:
-            mid = left + (right - left) / 2
-            if guess(mid) <= 0:  # noqa
+            mid = (right + left) // 2
+            if guess(mid) == -1:  # noqa
                 right = mid - 1
-            else:
+            elif guess(mid) == 1:
                 left = mid + 1
-        return left
+            else:
+                return mid
+        return

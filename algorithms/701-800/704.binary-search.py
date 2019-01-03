@@ -1,3 +1,4 @@
+# 二分查找
 class Solution(object):
     def search(self, nums, target):
         """
@@ -6,29 +7,24 @@ class Solution(object):
         :rtype: int
         """
         # 我的解法
-        if target not in nums:
+        # if target not in nums:
+        #     return -1
+        # return nums.index(target)
+
+        # 根据题意来的写法
+        if len(nums) == 0:
             return -1
-        else:
-            return nums.index(target)
-
-        # 二分查找的方法
-        # first_num = 0
-        # last_num = len(nums) - 1
-
-        # find = False
-
-        # while first_num < last_num and not find:
-        #     mid_num = (first_num + last_num) // 2
-        #     if nums[mid_num] == target:
-        #         find = True
-        #     else:
-        #         if target < nums[mid_num]:
-        #             last_num = mid_num - 1
-        #         else:
-        #             first_num = mid_num + 1
-        # if not find:
-        #     mid_num = -1
-        # return mid_num
+        left, right = 0, len(nums) - 1
+        while (left <= right):
+            mid = (left + right) // 2
+            if target < nums[mid]:
+                right = mid - 1
+            elif target > nums[mid]:
+                left = mid + 1
+            else:
+                return mid
+        #  End Condition:left>right
+        return -1
 
 
-print(Solution().search(nums=[-1, 0, 3, 5, 9, 12], target=9))
+print(Solution().search(nums=[-1, 0, 3, 5, 9, 12], target=2))

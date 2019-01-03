@@ -21,24 +21,24 @@ class Solution:
         :rtype: ListNode
         """
         # 我的想法
-        # res = []
-        # while head:
-        #     res.append(head.val)
-        #     head = head.next
-        # return res[len(res) // 2:]
+        res = []
+        while head:
+            res.append(head.val)
+            head = head.next
+        return res[len(res) // 2:]
 
         # 人家的解法，类似
-        length = 0
-        p = head
-        while p is not None:
-            p = p.next
-            length += 1
-        middle = length // 2
+        # length = 0
+        # p = head
+        # while p is not None:
+        #     p = p.next
+        #     length += 1
+        # middle = length // 2
 
-        p = head
-        for _ in range(middle):
-            p = p.next
-        return p
+        # p = head
+        # for _ in range(middle):
+        #     p = p.next
+        # return p
 
 
 l1 = ListNode(1)
