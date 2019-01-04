@@ -7,25 +7,16 @@ class Solution:
         """
         # 我的想法
         stack = []
-        for e in tokens:
-            if e == "+":
-                b = stack.pop()
-                a = stack.pop()
-                stack.append(a + b)
-            elif e == "-":
-                b = stack.pop()
-                a = stack.pop()
-                stack.append(a - b)
-            elif e == "*":
-                b = stack.pop()
-                a = stack.pop()
-                stack.append(a * b)
-            elif e == "/":
-                b = stack.pop()
-                a = stack.pop()
-                stack.append(int(a / b))
+        cal = {"+": lambda x, y: x + y, "-": lambda x, y: x - y,
+               "*": lambda x, y: x * y, "/": lambda x, y: int(x / y)}
+
+        for i in tokens:
+            if i not in ["+", "-", "*", "/"]:
+                stack.append(int(i))
             else:
-                stack.append(int(e))
+                b = stack.pop()
+                a = stack.pop()
+                stack.append(cal[i](a, b))
         return stack[0]
 
 
