@@ -20,25 +20,19 @@ class Solution:
         :type head: ListNode
         :rtype: ListNode
         """
-        # 我的想法
-        res = []
-        while head:
-            res.append(head.val)
-            head = head.next
-        return res[len(res) // 2:]
+        # 我的想法，输出到数组
+        # res = []
+        # while head:
+        #     res.append(head.val)
+        #     head = head.next
+        # return res[len(res) // 2:]
 
-        # 人家的解法，类似
-        # length = 0
-        # p = head
-        # while p is not None:
-        #     p = p.next
-        #     length += 1
-        # middle = length // 2
-
-        # p = head
-        # for _ in range(middle):
-        #     p = p.next
-        # return p
+        # 人家的解法,快慢指针法，空间复杂度为O(1)
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
 
 
 l1 = ListNode(1)
