@@ -14,7 +14,7 @@ class Solution(object):
         #         return False
         # return not list1
 
-        # 大神GitHub的解法。牛
+        # 人家的解法
         stack, lookup = [], {"(": ")", "{": "}", "[": "]"}
         for parenthese in s:
             if parenthese in lookup:
