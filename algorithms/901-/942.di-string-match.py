@@ -5,8 +5,8 @@ class Solution:
         :type S: str
         :rtype: List[int]
         """
-        r = len(S)
-        l = 0
+        # 我的想法
+        l, r = 0, len(S)
         res = []
         for i in S:
             if i is "D":
