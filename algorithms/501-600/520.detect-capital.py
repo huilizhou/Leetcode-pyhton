@@ -1,3 +1,4 @@
+# 检测大写字母
 class Solution(object):
     def detectCapitalUse(self, word):
         """
