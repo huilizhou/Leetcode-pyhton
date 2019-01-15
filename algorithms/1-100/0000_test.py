@@ -48,3 +48,45 @@
 # for i in range(1, n):
 #     factor[i] = factor[i - 1] * i
 # print(factor)
+
+names = ["Cecilia", "Lise", "Marie"]
+letters = [len(n) for n in names]
+
+# # print(letters)
+
+longest_name = None
+max_letters = 0
+
+# # for i in range(len(names)):
+# #     count = letters[i]
+# #     if count > max_letters:
+# #         longest_name = names[i]
+# #         max_letters = count
+# # print(longest_name)
+
+# for i, name in enumerate(names):
+#     count = letters[i]
+#     if count > max_letters:
+#         longest_name = name
+#         max_letters = count
+# print(longest_name)
+
+# for name, count in zip(names, letters):
+#     if count > max_letters:
+#         longest_name = name
+#         max_letters = count
+# print(longest_name)
+
+# names.append("Rosalind")
+# for name, count in zip(names, letters):
+#     print(name)
+
+# # a = [1, 2, 3]
+# # b = [4, 5, 6]
+# # c = [4, 5, 6, 7, 8]
+# # print(list(zip(a, b)))
+# # print(list(zip(a, c)))
+
+# a1, a2 = zip(*[(1, 2), (3, 4), (5, 6)])
+# print(list(a1))
+# print(list(a2))

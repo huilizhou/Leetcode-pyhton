@@ -32,3 +32,10 @@
 # # x.intersection_update(y, z)
 # r = x.intersection(y, z)
 # print(r, x, y, z)
+
+
+# for i in range(10, -1, -1):
+#     print(i)
+
+# res = [2, 3, 2, 3, 1, 5]
+# print(list(set(res)))
