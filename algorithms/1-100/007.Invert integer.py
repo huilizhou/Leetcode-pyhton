@@ -16,7 +16,7 @@ class Solution:
         else:
             return 0
 
-# // 小强哥的方法
+# 别人的写法
 # class Solution:
 #     def reverse(self, x):
 #         """
