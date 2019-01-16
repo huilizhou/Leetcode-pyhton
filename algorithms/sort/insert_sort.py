@@ -15,16 +15,36 @@
 
 class Solution:
     def insert_sort(self, list):
+        # n = len(list)
+        # if n == 1:
+        #     return list
+        # for i in range(1, n):
+        #     for j in range(i, 0, -1):
+        #         if list[j] < list[j - 1]:
+        #             list[j], list[j - 1] = list[j - 1], list[j]
+        #         else:
+        #             break
+        # return list
+
+        # 方法二
         n = len(list)
-        if n == 1:
-            return list
         for i in range(1, n):
-            for j in range(i, 0, -1):
-                if list[j] < list[j - 1]:
-                    list[j], list[j - 1] = list[j - 1], list[j]
-                else:
-                    break
+            if list[i] < list[i - 1]:
+                # 将这个数取出
+                temp = list[i]
+                # 保存下标
+                index = i
+                # 从后往前依次比较每个元素
+                for j in range(i - 1, -1, -1):
+                    # 和比取出元素大的元素交换
+                    if list[j] > temp:
+                        list[j + 1] = list[j]
+                        index = j
+                    else:
+                        break
+                # 插入元素
+                list[index] = temp
         return list
 
 
-print(Solution().insert_sort([2, 1, 3, 7, 5, 6, 4]))
+print(Solution().insert_sort([42, 20, 17, 13, 28, 14, 23, 15]))
