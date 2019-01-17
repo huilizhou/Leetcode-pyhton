@@ -33,13 +33,13 @@ class Solution(object):
         # return [x, x ^ x_xor_y]
 
         # 人家的想法
-        # result = set()
-        # for i in nums:
-        #     if i in result:
-        #         result.remove(i)
-        #     else:
-        #         result.add(i)
-        # return list(result)
+        result = set()
+        for i in nums:
+            if i in result:
+                result.remove(i)
+            else:
+                result.add(i)
+        return list(result)
 
 
 print(Solution().singleNumber([1, 2, 1, 2, 3, 5]))

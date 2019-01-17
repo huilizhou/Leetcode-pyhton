@@ -8,9 +8,9 @@ class Solution:
         :rtype: int
         """
         # 人家的解法
-        # import collections
-        # A_B_sum = collections.Counter(a + b for a in A for b in B)
-        # return sum(A_B_sum[-c - d] for c in C for d in D)
+        import collections
+        A_B_sum = collections.Counter(a + b for a in A for b in B)
+        return sum(A_B_sum[-c - d] for c in C for d in D)
 
         # 官方例程的解法
         # assert(len(A) == len(B) == len(C) == len(D))

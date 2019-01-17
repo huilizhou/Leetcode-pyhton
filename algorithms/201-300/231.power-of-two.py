@@ -6,12 +6,13 @@ class Solution:
         """
         # 我的想法,统计转化为二进制后的1的个数。
         # 例如 2 -10，4-100，8-1000；
-        # return bin(n).count("1") == 1 and n > 0
+        return bin(n).count("1") == 1 and n > 0
 
-        if n <= 0:
-            return False
-        else:
-            return ((n & (n - 1)) == 0)
+        # 人家的解法
+        # if n <= 0:
+        #     return False
+        # else:
+        #     return ((n & (n - 1)) == 0)
 
         # # 常规的解法
         # if n <= 0:
