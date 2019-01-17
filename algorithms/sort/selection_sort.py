@@ -12,13 +12,25 @@
 
 class Solution:
     def selection_sort(self, list):
+        # n = len(list)
+        # for i in range(n):
+        #     minIndex = i
+        #     for j in range(i + 1, n):
+        #         if list[j] < list[minIndex]:
+        #             minIndex = j
+        #             list[minIndex], list[i] = list[i], list[minIndex]
+        # return list
+
         n = len(list)
         for i in range(n):
-            min = i
+            minIndex = i
             for j in range(i + 1, n):
-                if list[j] < list[min]:
-                    min = j
-                    list[min], list[i] = list[i], list[min]
+                if list[j] < list[minIndex]:
+                    minIndex = j
+                if i == minIndex:
+                    pass
+                else:
+                    list[minIndex], list[i] = list[i], list[minIndex]
         return list
 
 
