@@ -27,10 +27,10 @@ class Solution:
             for j in range(i + 1, n):
                 if list[j] < list[minIndex]:
                     minIndex = j
-                if i == minIndex:
-                    pass
-                else:
-                    list[minIndex], list[i] = list[i], list[minIndex]
+            if i == minIndex:
+                pass
+            else:
+                list[minIndex], list[i] = list[i], list[minIndex]
         return list
 
 
