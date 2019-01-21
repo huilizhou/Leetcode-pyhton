@@ -1,6 +1,6 @@
 # 快速排序
 '''
-20190116 恪穆整理
+20190120 恪穆整理
 
 1.从数列中挑出一个元素，称为“基准”（pivot），
 2.重新排序数列，所有比基准值小的元素摆放在基准前面，
@@ -12,26 +12,21 @@
 
 '''
 
-
-class Solution:
-    def quick_sort(self, list):
-        less = []
-        pivotlist = []
-        more = []
-        if len(list) <= 1:
-            return list
-        else:
-            pivot = list[0]
-            for i in list:
-                if i < pivot:
-                    less.append(i)
-                elif i > pivot:
-                    more.append(i)
-                else:
-                    pivotlist.append(i)
-        less = self.quick_sort(less)
-        more = self.quick_sort(more)
-        return less + pivotlist + more
+'''python的简单版本'''
+# class Solution:
+#     def quick_sort(self, list):
+#         if len(list) <= 1:
+#             return list
+#         less = []
+#         greater = []
+#         pivot = list.pop()
+#         for item in list:
+#             if item < pivot:
+#                 less.append(item)
+#             else:
+#                 greater.append(item)
+#         list.append(pivot)
+#         return self.quick_sort(less) + [pivot] + self.quick_sort(greater)
 
 # 人家的简便写法
 # class Solution:
@@ -41,6 +36,33 @@ class Solution:
 #         else:
 #             pivot = arr[0]
 #             return self.quick_sort([x for x in arr[1:] if x < pivot]) + [pivot] + self.quick_sort([x for x in arr[1:] if x >= pivot])
+
+
+class Solution:
+    def quick_sort(self, list):
+        list = list[:]
+        n = len(list)
+
+        def partition(list, start, end):
+            i = start - 1
+            pivotIndex = end
+            pivot = list[end]
+            for j in range(start, end):
+                if list[j] < pivot:
+                    i = i + 1
+                    list[i], list[j] = list[j], list[i]
+            list[i + 1], list[pivotIndex] = list[pivotIndex], list[i + 1]
+            return i + 1
+
+        def sort(list, start, end):
+            if start >= end:
+                return
+            p = partition(list, start, end)
+            sort(list, start, p - 1)
+            sort(list, p + 1, end)
+
+        sort(list, 0, n - 1)
+        return list
 
 
 print(Solution().quick_sort([3, 2, 4, 1, 5, 6, 10, 8]))

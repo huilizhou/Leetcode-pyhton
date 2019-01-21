@@ -48,4 +48,32 @@ class Solution:
         return list
 
 
+# class Solution:
+#     def heap_sort(self, list):
+#         # 创建最大堆
+#         for start in range((len(list) - 2) // 2, -1, -1):
+#             self.sift_down(start, len(list) - 1, list)
+
+#     # 堆排序
+#         for end in range(len(list) - 1, 0, -1):
+#             list[0], list[end] = list[end], list[0]
+#             self.sift_down(0, end - 1, list)
+#         return list
+
+#     def sift_down(self, start, end, list):
+#         """最大堆调整"""
+#         root = start
+#         while True:
+#             child = 2 * root + 1
+#             if child > end:
+#                 break
+#             if child + 1 <= end and list[child] < list[child + 1]:
+#                 child += 1
+#             if list[root] < list[child]:
+#                 list[root], list[child] = list[child], list[root]
+#                 root = child
+#             else:
+#                 break
+
+
 print(Solution().heap_sort([9, 2, 1, 7, 6, 8, 5, 3, 4]))
