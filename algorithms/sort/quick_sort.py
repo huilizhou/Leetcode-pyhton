@@ -65,4 +65,4 @@ class Solution:
         return list
 
 
-print(Solution().quick_sort([3, 2, 4, 1, 5, 6, 10, 8]))
+print(Solution().quick_sort([6, 1, 2, 5, 9, 3, 4, 7, 10, 8]))

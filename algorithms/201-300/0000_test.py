@@ -43,7 +43,7 @@ class Solution:
             for j in range(start, end):
                 if list[j] < pivot:
                     i = i + 1
-                    list[i], list[j] = list[j], list[i]
+                    list[j], list[i] = list[i], list[j]
             list[i + 1], list[pivotIndex] = list[pivotIndex], list[i + 1]
             return i + 1
 
