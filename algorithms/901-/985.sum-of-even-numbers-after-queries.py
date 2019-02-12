@@ -1,3 +1,4 @@
+# 查询后的偶数和
 class Solution(object):
     def sumEvenAfterQueries(self, A, queries):
         S = sum(x for x in A if x % 2 == 0)
