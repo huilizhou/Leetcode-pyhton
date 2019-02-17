@@ -30,32 +30,38 @@
 
 # print(Solution().merge_sort([2, 4, 3, 1, 9, 8, 6, 7]))
 
-# 快速排序
-class Solution:
-    def quick_sort(self, list):
-        list = list[:]
-        n = len(list)
+# # 快速排序
+# class Solution:
+#     def quick_sort(self, list):
+#         list = list[:]
+#         n = len(list)
 
-        def partition(list, start, end):
-            i = start - 1
-            pivotIndex = end
-            pivot = list[end]
-            for j in range(start, end):
-                if list[j] < pivot:
-                    i = i + 1
-                    list[j], list[i] = list[i], list[j]
-            list[i + 1], list[pivotIndex] = list[pivotIndex], list[i + 1]
-            return i + 1
+#         def partition(list, start, end):
+#             i = start - 1
+#             pivotIndex = end
+#             pivot = list[end]
+#             for j in range(start, end):
+#                 if list[j] < pivot:
+#                     i = i + 1
+#                     list[j], list[i] = list[i], list[j]
+#             list[i + 1], list[pivotIndex] = list[pivotIndex], list[i + 1]
+#             return i + 1
 
-        def sort(list, start, end):
-            if start >= end:
-                return
-            p = partition(list, start, end)
-            sort(list, start, p - 1)
-            sort(list, p + 1, end)
+#         def sort(list, start, end):
+#             if start >= end:
+#                 return
+#             p = partition(list, start, end)
+#             sort(list, start, p - 1)
+#             sort(list, p + 1, end)
 
-        sort(list, 0, n - 1)
-        return list
+#         sort(list, 0, n - 1)
+#         return list
 
 
-print(Solution().quick_sort([2, 9, 3, 1, 5, 8, 7, 6]))
+# print(Solution().quick_sort([2, 9, 3, 1, 5, 8, 7, 6]))
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# a[0], a[1:] = a[-1], a[:-1]
+# print(a)
+# a.pop()
+# print(a)
