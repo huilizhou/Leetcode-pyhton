@@ -19,7 +19,7 @@ class Solution:
         #             return True
         # return False
 
-        # 我的解法，从第一行最后一列开始进行比较。20190219
+        # 我的解法，从第一行最后一列开始进行比较。20190219。
         if not matrix:
             return False
         m = len(matrix)

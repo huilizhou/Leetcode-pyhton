@@ -19,7 +19,7 @@ class Solution:
         #             continue
         # return False
 
-        # 人家的解法。充分利用题意
+        # 人家的解法。充分利用题意。和74题有类似的。
         if not matrix:
             return False
         m = len(matrix)
