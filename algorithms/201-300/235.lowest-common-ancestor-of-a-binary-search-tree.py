@@ -1,4 +1,7 @@
+# 二叉搜索树的最近公共祖先
 # Definition for a binary tree node.
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -14,14 +17,21 @@ class Solution:
         :type q: TreeNode
         :rtype: TreeNode
         """
-        if q.val >= root.val >= p.val or q.val <= root.val <= p.val:
-            return root
-        elif q.val > root.val and p.val > root.val:
-            return self.lowestCommonAncestor(root.right, p, q)
-        elif q.val < root.val and p.val < root.val:
+        # if q.val >= root.val >= p.val or q.val <= root.val <= p.val:
+        #     return root
+        # elif q.val > root.val and p.val > root.val:
+        #     return self.lowestCommonAncestor(root.right, p, q)
+        # elif q.val < root.val and p.val < root.val:
+        #     return self.lowestCommonAncestor(root.left, p, q)
+        # else:
+        #     return None
+
+        # 人家的写法
+        if p.val < root.val and q.val < root.val:
             return self.lowestCommonAncestor(root.left, p, q)
-        else:
-            return
+        if p.val > root.val and q.val > root.val:
+            return self.lowestCommonAncestor(root.right, p, q)
+        return root
 
 
 tree = TreeNode(6)

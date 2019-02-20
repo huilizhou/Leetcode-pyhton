@@ -1,4 +1,14 @@
+# 二叉树的最近公共祖先
 # Definition for a binary tree node.
+'''
+我的想法
+由说明知，p,q为不同节点且均存在于给定的二叉树中
+递归思想，以root为根的(子)树进行查找p和q。如果root=None or p or q，直接返回root。
+表示当前的树已经查找完毕，否则对左右子树进行查找，根据左右子树的返回值判断。
+如果左子树为空，说明两个节点一定在右子树。同理，如果右子树为空，说明两个节点一定在左子树。
+'''
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
