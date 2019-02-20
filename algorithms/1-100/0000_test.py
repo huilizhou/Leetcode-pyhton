@@ -49,13 +49,13 @@
 #     factor[i] = factor[i - 1] * i
 # print(factor)
 
-names = ["Cecilia", "Lise", "Marie"]
-letters = [len(n) for n in names]
+# names = ["Cecilia", "Lise", "Marie"]
+# letters = [len(n) for n in names]
 
-# # print(letters)
+# # # print(letters)
 
-longest_name = None
-max_letters = 0
+# longest_name = None
+# max_letters = 0
 
 # # for i in range(len(names)):
 # #     count = letters[i]
@@ -90,3 +90,14 @@ max_letters = 0
 # a1, a2 = zip(*[(1, 2), (3, 4), (5, 6)])
 # print(list(a1))
 # print(list(a2))
+
+# idx = [(2, 3), (3, 4)]
+# idx.append((1, 2))
+
+# print(idx.pop())
+
+# j = 1
+# matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
+# for k in matrix:
+#     k[j] = 0
+#     print(k)

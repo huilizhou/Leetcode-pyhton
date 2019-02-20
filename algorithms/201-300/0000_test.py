@@ -60,9 +60,22 @@
 
 # print(Solution().quick_sort([2, 9, 3, 1, 5, 8, 7, 6]))
 
-a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-# a[0], a[1:] = a[-1], a[:-1]
-# print(a)
-# a.pop()
-# print(a)
-print(a[0:2])
+# a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# # a[0], a[1:] = a[-1], a[:-1]
+# # print(a)
+# # a.pop()
+# # print(a)
+# print(a[0:2])
+
+board = [[0, 1, 0], [0, 0, 1], [1, 1, 1], [0, 0, 0]]
+for i in board:
+    i.insert(0, 0)
+    i.append(0)
+#     # print(i)
+board = [[0] * (len(board[0]))] + board + [[0] * (len(board[0]))]
+# for i in board:
+#     print(i)
+# # print(board)
+board.pop(0)
+board.pop(-1)
+print(board)
