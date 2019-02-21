@@ -51,13 +51,47 @@ class Solution:
         # 人家的解法
         # 我们使用二维数组来表示面板。在边缘上填充0，原则上，面板是无限的。
         # 很有意义
+#         for i in board:
+#             i.insert(0, 0)
+#             i.append(0)
+#         board = [[0] * len(board[0])] + board + [[0] * len(board[0])]
+#         m = len(board)
+#         n = len(board[0])
+#         t = []
+#         for i in range(1, m - 1):
+#             for j in range(1, n - 1):
+#                 x = board[i - 1][j - 1] + board[i - 1][j] + board[i - 1][j + 1] + board[i][j - 1] + \
+#                     board[i][j + 1] + board[i + 1][j - 1] + \
+#                     board[i + 1][j] + board[i + 1][j + 1]
+#                 if board[i][j] == 0:
+#                     if x == 3:
+#                         t.append((i, j, 1))
+#                 elif board[i][j] == 1:
+#                     if x < 2 or x > 3:
+#                         t.append((i, j, 0))
+#         for x in t:
+#             board[x[0]][x[1]] = x[2]
+
+#         board.pop(0)
+#         board.pop(-1)
+
+#         for i in board:
+#             i.pop(0)
+#             i.pop(-1)
+#         return board
+
+
+# print(Solution().gameOfLife([[0, 1, 0], [0, 0, 1], [1, 1, 1], [0, 0, 0]]))
+
         for i in board:
             i.insert(0, 0)
             i.append(0)
         board = [[0] * len(board[0])] + board + [[0] * len(board[0])]
+
         m = len(board)
         n = len(board[0])
         t = []
+
         for i in range(1, m - 1):
             for j in range(1, n - 1):
                 x = board[i - 1][j - 1] + board[i - 1][j] + board[i - 1][j + 1] + board[i][j - 1] + \
@@ -69,6 +103,7 @@ class Solution:
                 elif board[i][j] == 1:
                     if x < 2 or x > 3:
                         t.append((i, j, 0))
+
         for x in t:
             board[x[0]][x[1]] = x[2]
         board.pop(0)
