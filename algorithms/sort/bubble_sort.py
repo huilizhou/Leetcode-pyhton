@@ -9,28 +9,28 @@
 '''
 
 
-class Solution:
-    def bubble_sort(self, list):
-        length = len(list)
-        for index in range(length):
-            for j in range(1, length - index):
-                if list[j - 1] > list[j]:
-                    list[j - 1], list[j] = list[j], list[j - 1]
-        return list
-
-# 改进后的
 # class Solution:
-#     def bubble_sort_flag(self, list):
+#     def bubble_sort(self, list):
 #         length = len(list)
 #         for index in range(length):
-#             flag = True
 #             for j in range(1, length - index):
 #                 if list[j - 1] > list[j]:
 #                     list[j - 1], list[j] = list[j], list[j - 1]
-#                     flag = False
-#             if flag:
-#                 return list
 #         return list
 
+# 改进后的
+class Solution:
+    def bubble_sort_flag(self, list):
+        length = len(list)
+        for index in range(length):
+            flag = True
+            for j in range(1, length - index):
+                if list[j - 1] > list[j]:
+                    list[j - 1], list[j] = list[j], list[j - 1]
+                    flag = False
+            if flag:
+                return list
+        return list
 
-print(Solution().bubble_sort([3, 2, 4, 1, 5, 6, 10, 8]))
+
+print(Solution().bubble_sort_flag([3, 2, 4, 1, 5, 6, 10, 8]))
