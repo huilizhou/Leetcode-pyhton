@@ -6,6 +6,14 @@
 # maps["a"] = '2'
 # print(maps)
 
-nums = [1, 2, 3, 4, 5]
-stack = nums[0:1]
-print(stack)
+# nums = [1, 2, 3, 4, 5]
+# a = list(range(len(nums))) * 2
+# print(a)
+# stack = nums[0:1]
+# print(stack)
+
+# nums = [1, 2, 1]
+# pos = nums.index(max(nums))
+# for i in range(pos, pos - len(nums), -1):
+#     temp = nums[i]
+#     print(i)

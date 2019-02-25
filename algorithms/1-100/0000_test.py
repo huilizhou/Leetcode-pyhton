@@ -101,3 +101,5 @@
 # for k in matrix:
 #     k[j] = 0
 #     print(k)
+
+# print(bin(-4).count("1"))
