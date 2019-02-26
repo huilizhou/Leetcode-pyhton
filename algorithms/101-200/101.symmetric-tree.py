@@ -15,18 +15,39 @@ class Solution:
         :type root: TreeNode
         :rtype: bool
         """
-        # 我的想法，递归
-        def ist(left, right):
-            if left == None and right == None:
-                return True
-            if (left == None and right != None) or(left != None and right == None):
+        # 人家的写法(2种，递归法和迭代法)
+        return self.ismirror(root, root)
+    # 递归法
+
+    # def ismirror(self, p, q):
+    #     if not p and not q:
+    #         return True
+    #     elif not p or not q:
+    #         return False
+    #     elif p.val == q.val:
+    #         return self.ismirror(p.left, q.right) and self.ismirror(p.right, q.left)
+    #     else:
+    #         return False
+
+    # 迭代法，没懂
+    def ismirror(self, l_root, r_root):
+        qlist = []
+        qlist.append(l_root)
+        qlist.append(r_root)
+        while len(qlist) != 0:
+            t1 = qlist.pop()
+            t2 = qlist.pop()
+            if(t1 == None and t2 == None):
+                continue
+            if(t1 == None or t2 == None):
                 return False
-
-            return left.val == right.val and ist(left.left, right.right) and ist(left.right, right.left)
-
-        if(root == None):
-            return True
-        return ist(root.left, root.right)
+            if(t1.val != t2.val):
+                return False
+            qlist.append(t1.left)
+            qlist.append(t2.right)
+            qlist.append(t1.right)
+            qlist.append(t2.left)
+        return True
 
 
 tree = TreeNode(1)
