@@ -4,6 +4,12 @@ class ListNode(object):
         self.val = x
         self.next = None
 
+    def __repr__(self):
+        if self is None:
+            return "None"
+        else:
+            return "{} -> {}".format(self.val, repr(self.next))
+
 
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
@@ -12,22 +18,28 @@ class Solution(object):
         :type l2: ListNode
         :rtype: ListNode
         """
-        dummy = ListNode(0)
-        current, carry = dummy, 0
+        dummy = cur = ListNode(0)
+        carry = 0
 
-        while l1 or l2:
-            val = carry
+        while l1 or l2 or carry:
             if l1:
-                val += l1.val
+                carry += l1.val
                 l1 = l1.next
             if l2:
-                val += l2.val
+                carry += l2.val
                 l2 = l2.next
-            carry, val = divmod(val, 10)
-            current.next = ListNode(val)
-            current = current.next
-
-        if carry == 1:
-            current.next = ListNode(1)
-
+            cur.next = ListNode(carry % 10)
+            cur = cur.next
+            carry //= 10
         return dummy.next
+
+
+l1 = ListNode(5)
+# l1.next = ListNode(4)
+# l1.next.next = ListNode(2)
+
+l2 = ListNode(5)
+# l2.next = ListNode(6)
+# l2.next.next = ListNode(5)
+
+print(Solution().addTwoNumbers(l1, l2))
