@@ -20,14 +20,12 @@ class Solution:
         """
 
         # # 直接法
-        p = head
-        if not p:
-            return
-        while p.next:
-            if p.next.val == p.val:
-                p.next = p.next.next
+        current = head
+        while current and current.next:
+            if current.next.val == current.val:
+                current.next = current.next.next
             else:
-                p = p.next
+                current = current.next
         return head
 
 
