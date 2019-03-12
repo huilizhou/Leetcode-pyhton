@@ -17,20 +17,20 @@ class Solution:
     # 返回从尾部到头部的列表值序列，例如[1,2,3]
     def printListFromTailToHead(self, listNode):
         # write code here
-        # if not listNode:
-        #     return []
-        # res = []
-        # while listNode:
-        #     res.append(listNode.val)
-        #     listNode = listNode.next
-        # return res[::-1]
-
-        # 人家的写法，类似
+        if not listNode:
+            return []
         res = []
         while listNode:
-            res.insert(0, listNode.val)
+            res.append(listNode.val)
             listNode = listNode.next
-        return res
+        return res[::-1]
+
+        # 人家的写法，类似
+        # res = []
+        # while listNode:
+        #     res.insert(0, listNode.val)
+        #     listNode = listNode.next
+        # return res
 
 
 L = ListNode(1)
