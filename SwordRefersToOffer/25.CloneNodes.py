@@ -1,3 +1,4 @@
+# 复杂链表的复制
 class RandomListNode:
     def __init__(self, x):
         self.label = x
