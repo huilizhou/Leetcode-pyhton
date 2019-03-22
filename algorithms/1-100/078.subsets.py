@@ -6,32 +6,25 @@ class Solution:
         :rtype: List[List[int]]
         """
 
-        # 人家的解法，不断遍历
-        res = [[]]
-        for num in nums:
-            for temp in res[:]:
-                x = temp[:]
-                x.append(num)
-                res.append(x)
+        # # 人家的解法，不断遍历
+        # res = [[]]
+        # for num in nums:
+        #     for temp in res[:]:
+        #         x = temp[:]
+        #         x.append(num)
+        #         res.append(x)
+        # return res
+
+        # 人家的解法，回溯算法
+        res = []
+        self.dfs(0, nums, res, [])
         return res
 
-        # 另一种思路，类似于二叉树的先序遍历
-    #     self.results = []
-    #     self.search(sorted(nums), [], 0)
-    #     return self.results
-
-    # def search(self, nums, S, index):
-    #     if index == len(nums):
-    #         self.results.append(S)
-    #         return
-
-    #     self.search(nums, S + [nums[index]], index + 1)
-    #     self.search(nums, S, index + 1)
-
-        # res = [[]]
-        # for n in nums:
-        #     res += [item + [n] for item in res]
-        # return res
+    def dfs(self, idx, nums, res, path):
+        res.append(path)
+        for i in range(idx, len(nums)):
+            self.dfs(i + 1, nums, res, path + [nums[i]])
+        return
 
 
 print(Solution().subsets([1, 2, 3]))
