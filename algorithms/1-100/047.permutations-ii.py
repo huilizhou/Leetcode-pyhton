@@ -45,10 +45,10 @@ class Solution:
             return [nums]
         for i in range(len(nums)):
             num = nums[i]
-            if num in used:
-                continue
-            else:
+            if num not in used:
                 used.append(num)
+            else:
+                continue
             newnum = nums[:i] + nums[i + 1:]
             for item in self.permuteUnique(newnum):
                 res.append([num] + item)

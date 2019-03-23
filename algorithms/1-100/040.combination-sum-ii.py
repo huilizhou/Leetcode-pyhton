@@ -1,3 +1,4 @@
+# 组合总和II
 class Solution:
     def combinationSum2(self, candidates, target):
         """
@@ -22,30 +23,23 @@ class Solution:
     #             prev = candidates[start]
     #         start += 1
 
-        # 人家的解法,DFS算法
+        # 回溯法求解
+        result = []
         candidates.sort()
+        self._combinationSum2(candidates, target, 0, list(), result)
+        return result
 
-        def findSum(cans, tar):
-            result_list = []
-            i = 0
-            while i < len(cans):
-                can = cans[i]
-                # print(cans, tar)
-                can = cans[i]
-                if tar == can:
-                    result_list.append([can])
-                elif tar > can:
-                    found = findSum(cans[i + 1:], tar - can)
-                    if found:
-                        for sum_list in found:
-                            sum_list.append(can)
-                            result_list.append(sum_list)
-                else:
-                    return result_list
-                while i < len(cans) and cans[i] == can:
-                    i += 1
-            return result_list
-        return findSum(candidates, target)
+    def _combinationSum2(self, nums, target, index, path, res):
+        if target == 0:
+            res.append(path)
+            return
+        if path and target < path[-1]:
+            return
+        for i in range(index, len(nums)):
+            if i > index and nums[i] == nums[i - 1]:
+                continue
+            self._combinationSum2(
+                nums, target - nums[i], i + 1, path + [nums[i]], res)
 
 
 print(Solution().combinationSum2([10, 1, 2, 7, 6, 1, 5], 8))
