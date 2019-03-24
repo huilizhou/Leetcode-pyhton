@@ -7,29 +7,19 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
+        # 双指针法
+        '''
+        数组完成排序后，我们可以放置两个指针i和j，其中i是慢指针，而j是快指针。
+        只要nums[i]=nums[j]，我们就增加j以跳过重复项。
+        '''
         if not nums:
             return
-        l = 1
-        for i in range(len(nums) - 1):
-            if nums[i] != nums[i + 1]:
-                nums[l] = nums[i + 1]
-                l += 1
-        return l
-
-        # n = len(nums)
-        # if n == 0 or n == 1:
-        #     return n
-        # # nums[0,i]为非重复项
-        # i = 0
-        # j = i + 1
-        # while j <= n - 1:
-        #     if nums[j] != nums[i]:
-        #         # 指向同一个元素不需要赋值
-        #         if i + 1 != j:
-        #             nums[i + 1] = nums[j]
-        #         i += 1
-        #     j += 1
-        # return i + 1, nums
+        i = 0
+        for j in range(1, len(nums)):
+            if nums[j] != nums[i]:
+                i += 1
+                nums[i] = nums[j]
+        return i + 1
 
 
 print(Solution().removeDuplicates(nums=[0, 1, 1, 2]))
