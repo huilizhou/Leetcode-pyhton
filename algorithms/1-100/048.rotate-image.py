@@ -6,14 +6,18 @@ class Solution:
         """
 
         # 人家的解法
-        matrix[:] = map(list, zip(*matrix[::-1]))
+        # matrix[:] = map(list, zip(*matrix[::-1]))
         # return [list(reversed(x)) for x in zip(*matrix)]
 
         # 我的想法
+        '''
+        对应位置，对角线对称
+        '''
         matrix.reverse()
         for i in range(len(matrix)):
             for j in range(i):
                 matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+        return matrix
 
 
 print(Solution().rotate(matrix=[
