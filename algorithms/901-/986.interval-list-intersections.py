@@ -4,6 +4,9 @@ class Interval:
         self.start = s
         self.end = e
 
+    def __repr__(self):
+        return "[{}, {}]".format(self.start, self.end)
+
 
 class Solution:
     def intervalIntersection(self, A, B):
