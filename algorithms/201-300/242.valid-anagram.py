@@ -1,3 +1,4 @@
+# 有效的字母异位词
 class Solution(object):
     def isAnagram(self, s, t):
         """
@@ -6,13 +7,9 @@ class Solution(object):
         :rtype: bool
         """
         # 我的想法，将其排序后比较即可
-        # s = list(s)
-        # s.sort()
-        # t = list(t)
-        # t.sort()
-        # return s == t
+        # return "".join(sorted(s)) == "".join(sorted(t))
 
-        # 人家的解法
+        # # 人家的解法
         if len(s) != len(t):
             return False
         for word in set(s):
