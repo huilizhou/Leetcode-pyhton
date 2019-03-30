@@ -103,3 +103,34 @@
 #     print(k)
 
 # print(bin(-4).count("1"))
+
+# a = [[1, 2, 3], [2, 3, 4]]
+# # a = a + a
+# # print(a)
+# a.reverse()
+# print(a)
+
+# def zhuanzhi(matrix):
+#     matrix.reverse()
+#     for i in range(len(matrix)):
+#         for j in range(i):
+#             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+#     return matrix
+
+
+# a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# a[:] = map(list, zip(*a[::-1]))
+# print(a)
+
+# m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# n = [[1, 1, 1], [2, 2, 3], [3, 3, 3]]
+# print(list(zip(m, n)))
+
+# a = ([1, 2, 3], [1, 1, 1]), ([4, 5, 6], [2, 2, 2])
+# print((*zip(a)))
+
+# x = ['a', '1']
+# y = ['b', '2']
+# z = list(zip(x, y))
+# print(z)
+# print(list(zip(*z)))

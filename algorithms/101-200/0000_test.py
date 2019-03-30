@@ -84,3 +84,10 @@
 
 
 # print(Solution().heap_sort([9, 3, 2, 1, 4, 5, 6, 8, 7]))
+
+# import sys
+# n = sys.stdin.readlines()
+
+# version1 = "1.002"
+# ver1 = [int(token) for token in version1.split(".")]
+# print(ver1)

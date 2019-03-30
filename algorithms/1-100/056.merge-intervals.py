@@ -35,4 +35,6 @@ class Solution:
         return ans
 
 
-# print(Solution().merge([[1, 3], [2, 6], [8, 10], [15, 18]]))
+if __name__ == "__main__":
+    A = [Interval(1, 3), Interval(2, 6), Interval(8, 10), Interval(15, 18)]
+    print(Solution().merge(A))

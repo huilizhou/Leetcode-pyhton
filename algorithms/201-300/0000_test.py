@@ -80,3 +80,8 @@
 # board.pop(0)
 # board.pop(-2)
 # print(board)
+
+
+s = "bac"
+
+print(list(s))

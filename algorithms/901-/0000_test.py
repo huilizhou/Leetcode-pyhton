@@ -39,3 +39,14 @@
 
 # res = [2, 3, 2, 3, 1, 5]
 # print(list(set(res)))
+
+
+# 生成器
+# def countdown(x):
+#     while x >= 0:
+#         yield x
+#         x -= 1
+
+
+# for i in countdown(10):
+#     print(i)

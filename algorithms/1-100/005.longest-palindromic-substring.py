@@ -27,4 +27,8 @@ class Solution(object):
         return s[start:start + max_len]
 
 
-print(Solution().longestPalindrome('abcbdasdfkk'))
+# print(Solution().longestPalindrome('abcbdasdfkk'))
+if __name__ == "__main__":
+    import sys
+    s = input()
+    print(Solution().longestPalindrome(s))

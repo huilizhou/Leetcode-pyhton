@@ -23,16 +23,16 @@ class Solution(object):
         :rtype: int
         """
         # # 使用哈希表
-        # hash = {}
-        # start = 0
-        # max_length = 0
-        # for i, string in enumerate(s):
-        #     if string in hash and start <= hash[string]:
-        #         start = hash[string] + 1
-        #     else:
-        #         max_length = max(max_length, i - start + 1)
-        #     hash[string] = i
-        # return max_length
+        hash = {}
+        start = 0
+        max_length = 0
+        for i, string in enumerate(s):
+            if string in hash and start <= hash[string]:
+                start = hash[string] + 1
+            else:
+                max_length = max(max_length, i - start + 1)
+            hash[string] = i
+        return max_length
 
         # 人家的解法类似
         # curr = []
@@ -49,17 +49,17 @@ class Solution(object):
         #             max_len = currlen
         # return max_len
 
-        char_set, start, maxlen = {}, 0, 0
-        for i, ch in enumerate(s):
-            # 如果该字符已出现
-            if ch in char_set:
-                # 计算长度
-                maxlen = max(maxlen, i - start)
-                # 更新开头
-                start = max(start, char_set[ch] + 1)
-            # 如果该字符未出现
-            char_set[ch] = i
-        return max(maxlen, len(s) - start)
+        # char_set, start, maxlen = {}, 0, 0
+        # for i, ch in enumerate(s):
+        #     # 如果该字符已出现
+        #     if ch in char_set:
+        #         # 计算长度
+        #         maxlen = max(maxlen, i - start)
+        #         # 更新开头
+        #         start = max(start, char_set[ch] + 1)
+        #     # 如果该字符未出现
+        #     char_set[ch] = i
+        # return max(maxlen, len(s) - start)
 
 
 print(Solution().lengthOfLongestSubstring("abcad"))

@@ -9,19 +9,33 @@ class Solution:
         # from itertools import combinations
         # return list(combinations(range(1, n + 1), k))
 
-        # 人家的解法，回溯算法
-        if k > n:
-            return []
+        # # 人家的解法，回溯算法
+        # if k > n:
+        #     return []
 
-        def backtrack(start, stop, num):
-            if num == 1:
-                return [[i] for i in range(start, stop + 1)]
-            ans = []
-            for i in range(start, stop - num + 2):
-                for suf in backtrack(i + 1, stop, num - 1):
-                    ans.append([i] + suf)
-            return ans
-        return backtrack(1, n, k)
+        # def backtrack(start, stop, num):
+        #     if num == 1:
+        #         return [[i] for i in range(start, stop + 1)]
+        #     ans = []
+        #     for i in range(start, stop - num + 2):
+        #         for suf in backtrack(i + 1, stop, num - 1):
+        #             ans.append([i] + suf)
+        #     return ans
+        # return backtrack(1, n, k)
+
+        # # 运用组合数的性质C(n,k)=C(n,k-1)+C(n-1,k-1)
+        # if k > n or k == 0:
+        #     return []
+        # if k == 1:
+        #     return [[i] for i in range(1, n + 1)]
+        # if k == n:
+        #     return [[i for i in range(1, n + 1)]]
+
+        # answer = self.combine(n - 1, k)
+        # for item in self.combine(n - 1, k - 1):
+        #     item.append(n)
+        #     answer.append(item)
+        # return answer
 
 
 print(Solution().combine(4, 2))
