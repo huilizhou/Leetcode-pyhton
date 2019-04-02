@@ -5,7 +5,7 @@ class Solution:
         :rtype: bool
         """
 
-        # 我的想法
+        # # 我的想法
         # flag = 0
         # for i in range(len(nums)):
         #     if i > flag:
