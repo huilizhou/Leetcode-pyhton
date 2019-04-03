@@ -1,3 +1,4 @@
+# 零钱兑换
 class Solution(object):
     def coinChange(self, coins, amount):
         """
@@ -20,4 +21,4 @@ class Solution(object):
         return dp[-1] if dp[-1] != float("inf") else -1
 
 
-print(Solution().coinChange([1, 2, 5], 11))
+print(Solution().coinChange([1, 2, 5, 10], 30))

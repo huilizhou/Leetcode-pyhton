@@ -24,18 +24,18 @@ class Solution:
         # return backtrack(1, n, k)
 
         # # 运用组合数的性质C(n,k)=C(n,k-1)+C(n-1,k-1)
-        # if k > n or k == 0:
-        #     return []
-        # if k == 1:
-        #     return [[i] for i in range(1, n + 1)]
-        # if k == n:
-        #     return [[i for i in range(1, n + 1)]]
+        if k > n or k == 0:
+            return []
+        if k == 1:
+            return [[i] for i in range(1, n + 1)]
+        if k == n:
+            return [[i for i in range(1, n + 1)]]
 
-        # answer = self.combine(n - 1, k)
-        # for item in self.combine(n - 1, k - 1):
-        #     item.append(n)
-        #     answer.append(item)
-        # return answer
+        answer = self.combine(n - 1, k)
+        for item in self.combine(n - 1, k - 1):
+            item.append(n)
+            answer.append(item)
+        return answer
 
 
 print(Solution().combine(4, 2))
