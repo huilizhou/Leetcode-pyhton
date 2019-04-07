@@ -50,3 +50,11 @@
 
 # for i in countdown(10):
 #     print(i)
+
+
+import numpy as np
+
+A = np.matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
+
+U, S, V = np.linalg.svd(np.dot(A.T, A))
+print(S)

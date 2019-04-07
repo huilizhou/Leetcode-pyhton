@@ -13,7 +13,7 @@ class Solution(object):
         #     nums.append(target)
         #     return sorted(nums).index(target)
 
-        # 不用内置函数的做法
+        # # 不用内置函数的做法
         # l, r = 0, len(nums) - 1
         # while l <= r:
         #     mid = (l + r) // 2
@@ -25,6 +25,7 @@ class Solution(object):
         #         r -= 1
         # return l
 
+        # # 人家的写法，很不错
         for index, value in enumerate(nums):
             if target == value:
                 return index

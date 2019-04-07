@@ -20,60 +20,47 @@
 """
 
 
-class Solution:
-    def heap_sort(self, list):
-        def sift_down(start, end):
-            """最大堆调整"""
-            root = start
-            while True:
-                child = 2 * root + 1
-                if child > end:
-                    break
-                if child + 1 <= end and list[child] < list[child + 1]:
-                    child += 1
-                if list[root] < list[child]:
-                    list[root], list[child] = list[child], list[root]
-                    root = child
-                else:
-                    break
-
-    # 创建最大堆
-        for start in range((len(list) - 2) // 2, -1, -1):
-            sift_down(start, len(list) - 1)
-
-    # 堆排序
-        for end in range(len(list) - 1, 0, -1):
-            list[0], list[end] = list[end], list[0]
-            sift_down(0, end - 1)
-        return list
-
-
 # class Solution:
 #     def heap_sort(self, list):
-#         # 创建最大堆
+#         def sift_down(start, end):
+#             """最大堆调整"""
+#             root = start
+#             while True:
+#                 child = 2 * root + 1
+#                 if child > end:
+#                     break
+#                 if child + 1 <= end and list[child] < list[child + 1]:
+#                     child += 1
+#                 if list[root] < list[child]:
+#                     list[root], list[child] = list[child], list[root]
+#                     root = child
+#                 else:
+#                     break
+
+#     # 创建最大堆
 #         for start in range((len(list) - 2) // 2, -1, -1):
-#             self.sift_down(start, len(list) - 1, list)
+#             sift_down(start, len(list) - 1)
 
 #     # 堆排序
 #         for end in range(len(list) - 1, 0, -1):
 #             list[0], list[end] = list[end], list[0]
-#             self.sift_down(0, end - 1, list)
+#             sift_down(0, end - 1)
 #         return list
 
-#     def sift_down(self, start, end, list):
-#         """最大堆调整"""
-#         root = start
-#         while True:
-#             child = 2 * root + 1
-#             if child > end:
-#                 break
-#             if child + 1 <= end and list[child] < list[child + 1]:
-#                 child += 1
-#             if list[root] < list[child]:
-#                 list[root], list[child] = list[child], list[root]
-#                 root = child
-#             else:
-#                 break
+# print(Solution().heap_sort([9, 2, 1, 7, 6, 8, 5, 3, 4]))
+
+'''
+运用内置的heapq
+
+'''
+import heapq
 
 
-print(Solution().heap_sort([9, 2, 1, 7, 6, 8, 5, 3, 4]))
+def heapsort(iterable):
+    h = []
+    for value in iterable:
+        heapq.heappush(h, value)  # [0, 1, 2, 6, 3, 5, 4, 7, 8, 9]
+    return [heapq.heappop(h) for i in range(len(h))]
+
+
+print(heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0]))

@@ -134,3 +134,111 @@
 # z = list(zip(x, y))
 # print(z)
 # print(list(zip(*z)))
+
+
+'''
+选择排序
+'''
+
+
+# class Solution:
+#     def selection_sort(self, nums):
+#         n = len(nums)
+#         for i in range(n):
+#             minIndex = i
+#             for j in range(i + 1, n):
+#                 if nums[j] < nums[minIndex]:
+#                     minIndex = j
+#             if minIndex == i:
+#                 pass
+#             else:
+#                 nums[i], nums[minIndex] = nums[minIndex], nums[i]
+
+#         return nums
+
+
+# print(Solution().selection_sort([2, 1, 3, 4, 9, 8, 7, 6]))
+
+
+# class MonoSum:
+#     def calcMonoSum(self, A, n):
+#         # write code here
+#         sum = 0
+#         for i in range(n):
+#             for j in range(i):
+#                 if A[j] <= A[i]:
+#                     sum += A[j]
+#         return sum
+
+
+# print(MonoSum().calcMonoSum([1, 3, 5, 2, 4, 6], 6))
+
+
+# matrix = [[0] * 3] * 3
+# print(matrix)
+
+
+# matrix = [[0 for _ in range(3)]for _ in range(3)]
+
+
+# import numpy as np
+
+# A = np.matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
+# a = np.rank(A)
+# print(a)
+
+# U, S, V = np.linalg.svd(np.dot(A.T, A))
+# print(S)
+
+
+# def translter(s):
+#     res = []
+#     for i in range(len(s)):
+#         if s[i].isalpha():
+#             if (ord('a') <= ord(s[i]) < ord('z') or ord('A') <= ord(s[i]) < ord('Z')):
+#                 res.append(chr(ord(s[i]) + 1))
+#             elif s[i] == 'z':
+#                 res.append('a')
+#             elif s[i] == 'Z':
+#                 res.append('A')
+#         else:
+#             res.append(s[i])
+#     return ''.join(res)
+
+
+# if __name__ == "__main__":
+#     s = input()
+#     # s = 'Hello! How are you!'
+#     print(translter(s))
+
+# n = int(input())
+# print(bin(n)[2:])
+
+
+# while True:
+#     try:
+#         a, d = int(input()), {}
+#         for i in range(a):
+#             x, y = map(int, input().split())
+#             d[x] = y
+#         for i in sorted(d.items(), key=lambda c: c[1]):
+#             print(str(i[0]) + " " + str(i[1]))
+#     except:
+#         break
+
+# def solve(d):
+#     a = sorted(d.items(), key=lambda x: x[1])
+#     for i in a:
+#         print(str(i[0]) + " " + str(i[1]))
+
+
+# if __name__ == "__main__":
+#     n = 3
+#     d = {1: 90, 2: 87, 3: 93}
+#     solve(d)
+
+
+# import numpy as np
+# a = [1, 2, 3]
+# v = [4, 5, 6]
+# print(np.convolve(a, v))
