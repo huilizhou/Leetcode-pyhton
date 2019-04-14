@@ -23,4 +23,4 @@ class Solution:
         return res
 
 
-print(Solution().candy([1, 2]))
+print(Solution().candy([1, 2, 2]))
