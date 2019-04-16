@@ -15,5 +15,12 @@ class Solution(object):
             res += 1
         return res
 
+        # # 人家的解法，速度很慢
+        # res = 0
+        # while n != 0:
+        #     res += n & 1
+        #     n >>= 1
+        # return res
+
 
 print(Solution().hammingWeight(3))
