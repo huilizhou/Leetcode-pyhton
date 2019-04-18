@@ -11,22 +11,24 @@ class Solution(object):
         :type head1, head1: ListNode
         :rtype: ListNode
         """
-        d = dict()
-        while headA:
-            d[headA] = 1
-            headA = headA.next
-        while headB:
-            if headB in d:
-                return headB
-            headB = headB.next
-        return None
+        # d = dict()
+        # while headA:
+        #     d[headA] = 1
+        #     headA = headA.next
+        # while headB:
+        #     if headB in d:
+        #         return headB
+        #     headB = headB.next
+        # return None
 
-        # 人家的解法，没看明白
-        # p1, p2 = headA, headB
-        # while(p1 != p2):
-        #     p1 = headB if p1 == None else p1.next
-        #     p2 = headA if p2 == None else p2.next
-        # return p1
+        # 人家的解法，相当于p1+p2 和p2+p1叠加后同时遍历
+        if headA == None or headB == None:
+            return None
+        p1, p2 = headA, headB
+        while p1 != p2:
+            p1 = p1.next if p1 != None else headB
+            p2 = p2.next if p2 != None else headA
+        return p2
 
 
 L1 = ListNode(4)

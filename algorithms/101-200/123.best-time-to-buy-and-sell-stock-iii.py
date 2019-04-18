@@ -72,7 +72,7 @@ class Solution:
         #         b2 = a2 + price
         # return b2
 
-        # 我理解完之后的写法
+        # 我理解完之后的写法，两次遍历
         if len(prices) < 2:
             return 0
         n = len(prices)
