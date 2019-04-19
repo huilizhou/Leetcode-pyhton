@@ -242,3 +242,7 @@
 # a = [1, 2, 3]
 # v = [4, 5, 6]
 # print(np.convolve(a, v))
+
+
+# for i, v in enumerate(['tic', 'tac', 'toe'], 1):
+#     print(i, v, end=" ")

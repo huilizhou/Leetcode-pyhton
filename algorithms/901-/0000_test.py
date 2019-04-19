@@ -52,9 +52,29 @@
 #     print(i)
 
 
-import numpy as np
+# import numpy as np
 
-A = np.matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
+# A = np.matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
 
-U, S, V = np.linalg.svd(np.dot(A.T, A))
-print(S)
+# U, S, V = np.linalg.svd(np.dot(A.T, A))
+# print(S)
+
+# dict = {'Name': 'Runoob', 'Age': 7, 'Class': 'First'}
+# print(len(dict))
+# print(dict.items())
+# print(dict.keys())
+# print(dict.values())
+
+# a = set('abracadabra')
+# b = set('alacazam')
+# print(a, b)
+# print(a.difference(b))
+# c = list(a)
+# c.sort()
+# print(c)
+
+
+list = [1, 2, 3, 4]
+it = iter(list)
+for x in it:
+    print(x, end=" ")

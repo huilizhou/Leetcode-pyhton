@@ -46,10 +46,9 @@ class Solution:
                 l2 = l2.next
             curr = curr.next
         curr.next = l1 or l2
-
         return dummy.next
 
-        # 人家的解法，采用递归的思想
+        # 人家的解法，递归实现
         # if l1 == None:
         #     return l2
         # if l2 == None:

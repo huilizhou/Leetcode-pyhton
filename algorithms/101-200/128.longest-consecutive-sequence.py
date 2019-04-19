@@ -44,15 +44,16 @@ class Solution:
 
         # return longest_streak
 
-        # 人家的解法，同解法一
+        # 人家的解法
         """
+        思路如下：
         用哈希表存储每个端点值对应连续区间的长度
         若数已经在哈希表中，则跳过不处理
         若是新数加入：
             1.取其左右相邻数已有的连续区间长度left和right
             2.计算当前数的区间长度为：cur_length = left + right + 1
             3.根据 cur_length 更新最大长度 max_length 的值
-            4.新区间两端点的长度值
+            4.更新区间两端点的长度值
         """
 
         hash_dict = dict()
