@@ -1,3 +1,7 @@
+# 牛客网读取链表
+# 读取链表的输入
+
+
 class ListNode(object):
     def __init__(self, x):
         self.val = x
