@@ -1,3 +1,4 @@
+# 分糖果
 class Solution:
     def distributeCandies(self, candies):
         """

@@ -17,3 +17,7 @@
 # for i in range(pos, pos - len(nums), -1):
 #     temp = nums[i]
 #     print(i)
+
+# dict1 = {"a": 1, "b": 1}
+# dict2 = {"b": 1, "a": 1}
+# print(dict1 == dict2)
