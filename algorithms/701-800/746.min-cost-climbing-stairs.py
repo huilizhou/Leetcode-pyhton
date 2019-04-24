@@ -14,3 +14,4 @@ class Solution(object):
 
 print(Solution().minCostClimbingStairs(
     cost=[1, 100, 1, 1, 1, 100, 1, 1, 100, 1]))
+
