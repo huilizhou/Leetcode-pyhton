@@ -12,7 +12,7 @@ class Solution:
                                       triangle[i + 1][j + 1])
         return triangle[0][0]
 
-        #  人家的解法，很厉害
+        # #  人家的解法，很厉害
         # f = [0] * (len(triangle) + 1)
         # for row in triangle[::-1]:
         #     for i in range(len(row)):

@@ -15,7 +15,7 @@ for line in sys.stdin:
 
 # # coding=utf-8
 # # 本题为考试多行输入输出规范示例，无需提交，不计分。
-# import sys1
+# import sys
 # if __name__ == "__main__":
 #     # 读取第一行的n
 #     n = int(sys.stdin.readline().strip())

@@ -1,3 +1,4 @@
+# 汉明距离
 class Solution:
     def hammingDistance(self, x, y):
         """
