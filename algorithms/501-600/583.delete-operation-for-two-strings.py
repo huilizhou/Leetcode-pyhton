@@ -6,6 +6,7 @@ class Solution(object):
         :type word2: str
         :rtype: int
         """
+        # 同第72题编辑距离
         # m, n = len(word1) + 1, len(word2) + 1
         # dp = [[0] * n for _ in range(m)]
         # for i in range(1, m):
@@ -22,7 +23,7 @@ class Solution(object):
 
         '''
         # 人家的解法
-        最长公共子序列
+        最长公共子序列，这样的思路更容易理解
         https://blog.csdn.net/hrn1216/article/details/51534607
         '''
         m, n = len(word1) + 1, len(word2) + 1
