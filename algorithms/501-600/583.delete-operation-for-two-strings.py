@@ -6,7 +6,7 @@ class Solution(object):
         :type word2: str
         :rtype: int
         """
-        # 同第72题编辑距离
+        # 同第72题编辑距离。但是它只有删除没有插入。
         # m, n = len(word1) + 1, len(word2) + 1
         # dp = [[0] * n for _ in range(m)]
         # for i in range(1, m):
