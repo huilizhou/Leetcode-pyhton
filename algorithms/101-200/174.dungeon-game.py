@@ -5,6 +5,13 @@ class Solution(object):
         :type dungeon: List[List[int]]
         :rtype: int
         """
+        '''
+        自顶向下的方法，会有一个问题，我们需要判断每次到达一个房间后，我们的血量不能是负数。
+        如果采用自底向上的思路去做，我们只需要取右和下的最小值（我们需要计算的最小能量），然后减去dungoen[i][j].
+        并且保证到达房间前的血量大于等于0就可以了。
+        f(i,j)=max(0,min(f(i+1,j),f(i,j+1))-dungeon[i][j])
+
+        '''
         m, n = len(dungeon), len(dungeon[0])
         dp = [[0] * n for _ in range(m)]
 
