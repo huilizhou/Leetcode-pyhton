@@ -6,7 +6,7 @@ class Solution:
         :rtype: int
         """
 
-        # 人家的解法
+        # 人家的写法
         # m = len(obstacleGrid)
         # n = len(obstacleGrid[0])
         # if m == 0 or n == 0:
@@ -15,37 +15,39 @@ class Solution:
         # for i in range(m):
         #     for j in range(n):
         #         if obstacleGrid[i][j] == 1:
-        #             continue
+        #             res[i][j] = 0
         #         else:
         #             if i == 0 and j == 0:
         #                 res[i][j] = 1
-        #             else:
-        #                 if i - 1 >= 0:
-        #                     res[i][j] += res[i - 1][j]
-        #                 if j - 1 >= 0:
-        #                     res[i][j] += res[i][j - 1]
+        #             elif i == 0 and j > 0:
+        #                 res[i][j] = res[i][j - 1]
+        #             elif j == 0 and i > 0:
+        #                 res[i][j] = res[i - 1][j]
+        #             elif i > 0 and j > 0:
+        #                 res[i][j] = res[i - 1][j] + res[i][j - 1]
         # return res[m - 1][n - 1]
 
-        # 我的想法
+        # 我的写法
         m = len(obstacleGrid)
         n = len(obstacleGrid[0])
         if m == 0 or n == 0:
             return 0
-        res = [[0] * n for _ in range(m)]
+        dp = [[0] * n for _ in range(m)]
         for i in range(m):
-            for j in range(n):
+            if obstacleGrid[i][0] == 1:
+                break
+            dp[i][0] = 1
+        for j in range(n):
+            if obstacleGrid[0][j] == 1:
+                break
+            dp[0][j] = 1
+        for i in range(1, m):
+            for j in range(1, n):
                 if obstacleGrid[i][j] == 1:
-                    res[i][j] = 0
+                    dp[i][j] = 0
                 else:
-                    if i == 0 and j == 0:
-                        res[i][j] = 1
-                    elif i == 0 and j > 0:
-                        res[i][j] = res[i][j - 1]
-                    elif j == 0 and i > 0:
-                        res[i][j] = res[i - 1][j]
-                    elif i > 0 and j > 0:
-                        res[i][j] = res[i - 1][j] + res[i][j - 1]
-        return res[m - 1][n - 1]
+                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+        return dp[-1][-1]
 
 
 print(Solution().uniquePathsWithObstacles([
