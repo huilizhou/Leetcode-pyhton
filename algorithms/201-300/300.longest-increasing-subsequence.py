@@ -18,39 +18,35 @@ class Solution:
         # return res
 
         # 人家的解法
-        # import bisect
-        # if not nums:
-        #     return 0
-        # lis = [nums[0]]
-        # for i in range(1, len(nums)):
-        #     if nums[i] > lis[-1]:
-        #         lis.append(nums[i])
-        #     else:
-        #         lis[bisect.bisect_left(lis, nums[i])] = nums[i]
-        # return len(lis)
-
+        import bisect
+        res = []
+        for num in nums:
+            if not res or num > res[-1]:
+                res.append(num)
+            else:
+                res[bisect.bisect_left(res, num)] = num
+        return len(res)
         # # 二分法O(n log n)很好
         '''
         dp[i]：所有长度为i+1的递增序列中，最小的那个序列尾数，由定义知dp数组必然是一个递增数组。
-        可以用max(dp)，来表示最长递增子序列的长度。
-
+        可以用max(dp)，来表示最长递增子序列的长度。 
         '''
-        if not nums:
-            return 0
-        res = [nums[0]]
-        for i in range(1, len(nums)):
-            if nums[i] > res[-1]:
-                res.append(nums[i])
-            else:
-                l, r = 0, len(res) - 1
-                while l <= r:
-                    mid = (l + r) // 2
-                    if nums[i] > res[mid]:
-                        l = mid + 1
-                    else:
-                        r = mid - 1
-                res[l] = nums[i]
-        return len(res)
+        # if not nums:
+        #     return 0
+        # res = [nums[0]]
+        # for i in range(1, len(nums)):
+        #     if nums[i] > res[-1]:
+        #         res.append(nums[i])
+        #     else:
+        #         l, r = 0, len(res) - 1
+        #         while l <= r:
+        #             mid = (l + r) // 2
+        #             if nums[i] > res[mid]:
+        #                 l = mid + 1
+        #             else:
+        #                 r = mid - 1
+        #         res[l] = nums[i]
+        # return len(res)
 
 
 print(Solution().lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18]))
