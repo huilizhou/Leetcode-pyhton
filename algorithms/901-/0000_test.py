@@ -114,3 +114,10 @@
 
 # print(partial_table("ABCDABD"))
 # print(kmp_match("BBC ABCDAB ABCDABCDABDE", "ABCDABD"))
+
+
+# # L = [(1, [1, 2]), (0, [2, 1]), (3, [3, 2])]
+# L = [([2, 2], 1), ([2, 1], 3), ([3, 2], 0)]
+# print(L)
+# L.sort()
+# print(L)
