@@ -27,10 +27,7 @@ class Solution:
                 res[bisect.bisect_left(res, num)] = num
         return len(res)
         # # 二分法O(n log n)很好
-        '''
-        dp[i]：所有长度为i+1的递增序列中，最小的那个序列尾数，由定义知dp数组必然是一个递增数组。
-        可以用max(dp)，来表示最长递增子序列的长度。 
-        '''
+
         # if not nums:
         #     return 0
         # res = [nums[0]]

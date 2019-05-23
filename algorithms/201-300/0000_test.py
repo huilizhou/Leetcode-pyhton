@@ -82,6 +82,43 @@
 # print(board)
 
 
-s = "bac"
+# s = "bac"
 
-print(list(s))
+# print(list(s))
+
+# import bisect
+
+# a = [2, 3, 1, 5, 8, 6, 7]
+# print(bisect.bisect_left(a, 5))
+# print(a)
+# print(bisect.bisect_right(a, 5))
+
+# a = [3, 4, 6, 7, 9]
+# b = bisect.bisect(a, 8)
+# print(b)
+
+# a.insert(b, 8)
+# b = bisect.bisect(a, 8.0)
+# print(a, b)
+
+class Solution:
+    def lengthOfLIS(self, nums):
+        if not nums:
+            return 0
+        res = [nums[0]]
+        for i in range(1, len(nums)):
+            if nums[i] > res[-1]:
+                res.append(nums[i])
+            else:
+                l, r = 0, len(res) - 1
+                while l <= r:
+                    mid = (l + r) // 2
+                    if nums[i] > res[mid]:
+                        l = mid + 1
+                    else:
+                        r = mid - 1
+                res[l] = nums[i]
+        return len(res)
+
+
+print(Solution().lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18]))
