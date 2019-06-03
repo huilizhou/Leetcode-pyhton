@@ -20,22 +20,14 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        # 我的想法，分成两个链表即奇数位置链表和偶数位置链表
-        # 再将偶数位置和奇数位置链表合并。未完成
-
-        # 人家的解法：
-        # 运用temp,结点交换画流程图解决
-        dummy = ListNode(0)
-        dummy.next = head
-        curr = dummy
-
-        while curr.next and curr.next.next:
-            next_one, next_two, next_three = curr.next, curr.next.next, curr.next.next.next
-            curr.next = next_two
-            next_two.next = next_one
-            next_one.next = next_three
-            curr = next_one
-        return dummy.next
+        # 我的解法
+        if not head or not head.next:
+            return head
+        node = head
+        while node and node.next:
+            node.val, node.next.val = node.next.val, node.val
+            node = node.next.next
+        return head
 
         # 调用了一下递归
         # if not head or not head.next:
@@ -50,5 +42,7 @@ l2 = ListNode(1)
 l2.next = ListNode(2)
 l2.next.next = ListNode(3)
 l2.next.next.next = ListNode(4)
+l2.next.next.next.next = ListNode(5)
+
 
 print(Solution().swapPairs(l2))
