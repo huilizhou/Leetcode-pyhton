@@ -1,9 +1,14 @@
+# 完全平方数
 class Solution(object):
     def numSquares(self, n):
         """
         :type n: int
         :rtype: int
         """
+        '''
+        四平方定理：任何一个正整数都可以表示成不超过四个整数的平方之和。
+        推论：满足四数平方和定理的数n(四个整数的情况)，必定满足n=4^a(8b+7)
+        '''
         while n % 4 == 0:
             n /= 4
         if n % 8 == 7:
