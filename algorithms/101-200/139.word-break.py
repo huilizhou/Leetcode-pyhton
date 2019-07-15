@@ -1,3 +1,4 @@
+# 单词拆分
 class Solution(object):
     def wordBreak(self, s, wordDict):
         """
@@ -5,13 +6,13 @@ class Solution(object):
         :type wordDict: List[str]
         :rtype: bool
         """
-        breakp = [0]
+        dp = [0]
         for i in range(len(s) + 1):
-            for j in breakp:
+            for j in dp:
                 if s[j:i] in wordDict:
-                    breakp.append(i)
+                    dp.append(i)
                     break
-        return breakp[-1] == len(s)
+        return dp[-1] == len(s)
 
         '''
         人家的解法
