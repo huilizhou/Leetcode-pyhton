@@ -5,6 +5,12 @@ class Solution(object):
         :type label: int
         :rtype: List[int]
         """
+        """
+        我们会发现一个规律，在偶数行，原索引和逆序后的索引值加在一起，
+        等于该行最小索引和最大索引的值（因为每一行都是一个等差数列），
+        而这个值也恰好等于该行最小索引值的3倍减去1（因为下一行开始的索引是前一行开始索引的2倍）。
+
+        """
         if label == 1:
             return [label]
         res = [label]
