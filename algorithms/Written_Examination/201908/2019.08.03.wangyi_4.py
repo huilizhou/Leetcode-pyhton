@@ -19,13 +19,13 @@ import sys
 if __name__ == "__main__":
     values = []
     # 读取第一行的n
-    line = sys.stdin.readline().strip()
+    line1 = sys.stdin.readline().strip()
     # 把每一行的数字分隔后转化成int列表
-    n, q = list(map(int, line.split()))
+    n, q = list(map(int, line1.split()))
     # 读取第二行
-    line = sys.stdin.readline().strip()
+    line2 = sys.stdin.readline().strip()
     # 把每一行的数字分隔后转化成int列表
-    nums = list(map(int, line.split()))
+    nums = list(map(int, line2.split()))
 
     for i in range(q):
         # 读取每一行
