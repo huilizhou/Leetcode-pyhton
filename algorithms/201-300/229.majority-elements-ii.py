@@ -1,3 +1,4 @@
+# 求众数II
 class Solution:
     def majorityElement(self, nums):
         """

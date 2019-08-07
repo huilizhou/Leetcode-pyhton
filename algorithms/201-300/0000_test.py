@@ -101,24 +101,34 @@
 # b = bisect.bisect(a, 8.0)
 # print(a, b)
 
-class Solution:
-    def lengthOfLIS(self, nums):
-        if not nums:
-            return 0
-        res = [nums[0]]
-        for i in range(1, len(nums)):
-            if nums[i] > res[-1]:
-                res.append(nums[i])
-            else:
-                l, r = 0, len(res) - 1
-                while l <= r:
-                    mid = (l + r) // 2
-                    if nums[i] > res[mid]:
-                        l = mid + 1
-                    else:
-                        r = mid - 1
-                res[l] = nums[i]
-        return len(res)
+# class Solution:
+#     def lengthOfLIS(self, nums):
+#         if not nums:
+#             return 0
+#         res = [nums[0]]
+#         for i in range(1, len(nums)):
+#             if nums[i] > res[-1]:
+#                 res.append(nums[i])
+#             else:
+#                 l, r = 0, len(res) - 1
+#                 while l <= r:
+#                     mid = (l + r) // 2
+#                     if nums[i] > res[mid]:
+#                         l = mid + 1
+#                     else:
+#                         r = mid - 1
+#                 res[l] = nums[i]
+#         return len(res)
 
 
-print(Solution().lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18]))
+# print(Solution().lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18]))
+
+
+# str = "dog cat cat dog"
+# print(str)
+# l = str.split(' ')
+# print(l)
+z = zip(['a', 'b', 'b', 'a'], ['dog', 'cat', 'cat', 'dog'])
+print(list(z))
+sp = [x + y for x, y in z]
+print(sp)

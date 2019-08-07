@@ -1,3 +1,4 @@
+# 存在重复元素
 class Solution:
     def containsDuplicate(self, nums):
         """

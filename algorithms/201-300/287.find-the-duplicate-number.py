@@ -1,3 +1,4 @@
+# 寻找重复数
 class Solution:
     def findDuplicate(self, nums):
         """
