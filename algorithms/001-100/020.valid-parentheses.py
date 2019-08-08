@@ -24,4 +24,4 @@ class Solution(object):
         return len(stack) == 0
 
 
-print(Solution().isValid(")((()()))"))
+print(Solution().isValid("((()()))"))

@@ -128,7 +128,11 @@
 # print(str)
 # l = str.split(' ')
 # print(l)
-z = zip(['a', 'b', 'b', 'a'], ['dog', 'cat', 'cat', 'dog'])
-print(list(z))
-sp = [x + y for x, y in z]
-print(sp)
+# z = zip(['a', 'b', 'b', 'a'], ['dog', 'cat', 'cat', 'dog'])
+# print(list(z))
+# sp = [x + y for x, y in z]
+# print(sp)
+
+
+dic = {'a': 2, 'b': 1}
+print(dic['a'])
