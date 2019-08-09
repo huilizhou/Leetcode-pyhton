@@ -91,3 +91,11 @@
 # version1 = "1.002"
 # ver1 = [int(token) for token in version1.split(".")]
 # print(ver1)
+
+s = 'abcdac'
+# print(s[:2])
+# print(s[2 - 1::-1])
+# print(s[2:])
+# print(s[:2 - 1:-1])
+print(s[:len(s)])
+print(s[len(s):])

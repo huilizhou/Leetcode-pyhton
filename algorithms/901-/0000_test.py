@@ -122,8 +122,8 @@
 # L.sort()
 # print(L)
 
-L = ['a', 'b', 'a', 'c', 'd', 'b']
-dic = {}
-for i in L:
-    dic[i] = dic.get(i, 0) + 1
-print(dic)
+# L = ['a', 'b', 'a', 'c', 'd', 'b']
+# dic = {}
+# for i in L:
+#     dic[i] = dic.get(i, 0) + 1
+# print(dic)
