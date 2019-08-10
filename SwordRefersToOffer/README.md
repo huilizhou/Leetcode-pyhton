@@ -1,12 +1,12 @@
 - [01.二维数组的查找 ](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/01.Find.py)
 - [02.替换空格](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/02.replaceSpace.py)
 - [03.从尾到头打印链表](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/03.printListFromTailToHead.py)
-- 04.重建二叉树
-- 05.用两个栈实现队列
-- 06.旋转数组中的最小的数字
-- 07.斐波拉契数列
-- 08.跳台阶
-- 09.变态跳台阶
+- [04.重建二叉树](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/04.reConstructBinaryTree.py)
+- [05.用两个栈实现队列](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/05.MyQueue.py)
+- [06.旋转数组中的最小的数字](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/06.minNumberInRotateArray.py)
+- [07.斐波拉契数列](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/07.Fibonacci.py)
+- [08.跳台阶](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/08.jumpFloor.py)
+- [09.变态跳台阶](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/09.jumpFloorII.py)
 - 10.矩形覆盖
 - 11.二进制中1的个数
 - 12.数值的整数次方
