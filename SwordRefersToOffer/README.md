@@ -1,6 +1,6 @@
 - [01.二维数组的查找 ](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/01.Find.py)
-- 02.替换空格
-- 03.从尾到头打印链表
+- [02.替换空格](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/02.replaceSpace.py)
+- [03.从尾到头打印链表](https://github.com/huilizhou/Leetcode-pyhton/blob/master/SwordRefersToOffer/03.printListFromTailToHead.py)
 - 04.重建二叉树
 - 05.用两个栈实现队列
 - 06.旋转数组中的最小的数字
