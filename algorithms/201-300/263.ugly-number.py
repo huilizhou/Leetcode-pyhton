@@ -1,3 +1,4 @@
+# 丑数
 class Solution:
     def isUgly(self, num):
         """
@@ -24,3 +25,6 @@ class Solution:
         #     num //= 5
 
         # return num == 1
+
+
+print(Solution().isUgly(8))
