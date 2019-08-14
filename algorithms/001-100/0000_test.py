@@ -281,3 +281,13 @@
 
 # print(partial_table('ABCDABD'))
 # print(kmp_match("BBC ABCDAB ABCDABCDABDE", "ABCDABD"))
+
+
+# print([[]] + [[1]])
+
+# print([] + [])
+
+
+import itertools
+
+print(list(itertools.combinations([1, 2, 3], 2)))

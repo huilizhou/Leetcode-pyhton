@@ -5,26 +5,38 @@ class Solution:
         :type nums: List[int]
         :rtype: List[List[int]]
         """
+        # 库函数 itertools.combinations()
+        # import itertools
+        # res = []
+        # for i in range(len(nums) + 1):
+        #     for tmp in itertools.combinations(nums, i):
+        #         res.append(tmp)
+        # return res
 
-        # 人家的解法，不断遍历
+        # 人家的解法，迭代
+        # res = [[]]
+        # for num in nums:
+        #     for temp in res[:]:
+        #         x = temp[:]
+        #         x.append(num)
+        #         res.append(x)
+        # return res
+
         res = [[]]
-        for num in nums:
-            for temp in res[:]:
-                x = temp[:]
-                x.append(num)
-                res.append(x)
+        for i in nums:
+            res += [[i] + num for num in res]
         return res
 
-    #     # 人家的解法，回溯算法
-    #     res = []
-    #     self.dfs(0, nums, res, [])
-    #     return res
+        # 回溯法
+        # res = []
+        # n = len(nums)
 
-    # def dfs(self, idx, nums, res, path):
-    #     res.append(path)
-    #     for i in range(idx, len(nums)):
-    #         self.dfs(i + 1, nums, res, path + [nums[i]])
-    #     return
+        # def helper(i, tmp):
+        #     res.append(tmp)
+        #     for j in range(i, n):
+        #         helper(j + 1, tmp + [nums[j]])
+        # helper(0, [])
+        # return res
 
 
 print(Solution().subsets([1, 2, 3]))
