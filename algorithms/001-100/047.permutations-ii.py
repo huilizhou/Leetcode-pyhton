@@ -5,26 +5,11 @@ class Solution:
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        # # 调用itertools.permutations(nums, len(nums))
+        # # 调用库函数
         # if len(nums) <= 1:
         #     return [nums]
         # import itertools
         # return list(set(itertools.permutations(nums, len(nums))))
-
-        # # 人家的解法
-        # result = []
-        # result.append([])
-        # for i, num in enumerate(nums):
-        #     current_result = []
-        #     for item in result:
-        #         for j in range(i + 1):
-        #             if j > 0 and num == item[j - 1]:
-        #                 break
-        #             temp = item[:]
-        #             temp.insert(j, num)
-        #             current_result.append(temp)
-        #     result = current_result
-        # return result
 
         # 人家的解法
         # result = [[]]
@@ -39,20 +24,20 @@ class Solution:
         #     result = temp
         # return result
 
-        # 在046题 全排列基础上，添加了去重的步骤。
-        res, used = [], []
-        if len(nums) <= 1:
-            return [nums]
-        for i in range(len(nums)):
-            num = nums[i]
-            if num not in used:
-                used.append(num)
-            else:
-                continue
-            newnum = nums[:i] + nums[i + 1:]
-            for item in self.permuteUnique(newnum):
-                res.append([num] + item)
-        return res
+        # 递归
+        # res, used = [], []
+        # if len(nums) <= 1:
+        #     return [nums]
+        # for i in range(len(nums)):
+        #     num = nums[i]
+        #     if num not in used:
+        #         used.append(num)
+        #     else:
+        #         continue
+        #     newnum = nums[:i] + nums[i + 1:]
+        #     for item in self.permuteUnique(newnum):
+        #         res.append([num] + item)
+        # return res
 
 
 print(Solution().permuteUnique([1, 1, 2]))
