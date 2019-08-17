@@ -21,7 +21,7 @@
 
 class Solution:
     def heap_sort(self, list):
-        def sift_down(start, end):
+        def shift_down(start, end):
             """最大堆调整"""
             root = start
             while True:
@@ -44,13 +44,13 @@ class Solution:
     # 创建最大堆
         # 从最后一个有子节点的开始调整最大堆
         for start in range((len(list) - 2) // 2, -1, -1):
-            sift_down(start, len(list) - 1)
+            shift_down(start, len(list) - 1)
 
     # 堆排序
         # 将最大的放到堆的后面，堆-1，继续调整堆
         for end in range(len(list) - 1, 0, -1):
             list[0], list[end] = list[end], list[0]
-            sift_down(0, end - 1)
+            shift_down(0, end - 1)
         return list
 
 
