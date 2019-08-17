@@ -134,5 +134,10 @@
 # print(sp)
 
 
-dic = {'a': 2, 'b': 1}
-print(dic['a'])
+# dic = {'a': 2, 'b': 1}
+# dic1 = {'b': 1, 'a': 2}
+# print(dic1 == dic)
+# print(dic['a'])
+
+
+print(list(zip('abb', 'egg')))
