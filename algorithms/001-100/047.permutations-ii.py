@@ -25,19 +25,19 @@ class Solution:
         # return result
 
         # 递归
-        # res, used = [], []
-        # if len(nums) <= 1:
-        #     return [nums]
-        # for i in range(len(nums)):
-        #     num = nums[i]
-        #     if num not in used:
-        #         used.append(num)
-        #     else:
-        #         continue
-        #     newnum = nums[:i] + nums[i + 1:]
-        #     for item in self.permuteUnique(newnum):
-        #         res.append([num] + item)
-        # return res
+        res, used = [], []
+        if len(nums) <= 1:
+            return [nums]
+        for i in range(len(nums)):
+            num = nums[i]
+            if num not in used:
+                used.append(num)
+            else:
+                continue
+            newnum = nums[:i] + nums[i + 1:]
+            for item in self.permuteUnique(newnum):
+                res.append([num] + item)
+        return res
 
 
 print(Solution().permuteUnique([1, 1, 2]))
