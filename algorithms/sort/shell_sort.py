@@ -26,14 +26,29 @@ class Solution:
         gap = n // 2
         while gap > 0:
             for i in range(gap, n):
-                temp = list[i]
-                j = i
-                while j >= gap and list[j - gap] > temp:
-                    list[j] = list[j - gap]
-                    j -= gap
-                list[j] = temp
-            gap = gap // 2
+                while i >= gap and list[i] < list[i - gap]:
+                    list[i - gap], list[i] = list[i], list[i - gap]
+                    i -= gap
+            gap //= 2
         return list
 
 
 print(Solution().shell_sort([2, 1, 3, 7, 5, 6, 4]))
+
+
+# class Solution:
+#     def shell_sort(self, list):
+#         n = len(list)
+#         gap = n // 2
+#         while gap > 0:
+#             for i in range(gap, n):
+#                 for j in range(i, gap - 1, -gap):
+#                     if list[j] < list[j - gap]:
+#                         list[j - gap], list[j] = list[j], list[j - gap]
+#                     else:
+#                         break
+#             gap //= 2
+#         return list
+
+
+# print(Solution().shell_sort([2, 1, 3, 7, 5, 6, 4]))

@@ -41,12 +41,12 @@ class Solution:
                     # 无需调整的时候，退出
                     break
 
-    # 创建最大堆
+        # 创建最大堆
         # 从最后一个有子节点的开始调整最大堆
         for start in range((len(list) - 2) // 2, -1, -1):
             shift_down(start, len(list) - 1)
 
-    # 堆排序
+        # 堆排序
         # 将最大的放到堆的后面，堆-1，继续调整堆
         for end in range(len(list) - 1, 0, -1):
             list[0], list[end] = list[end], list[0]
@@ -55,7 +55,6 @@ class Solution:
 
 
 print(Solution().heap_sort([9, 2, 1, 7, 6, 8, 5, 3, 4]))
-
 # '''
 # 运用内置的heapq
 

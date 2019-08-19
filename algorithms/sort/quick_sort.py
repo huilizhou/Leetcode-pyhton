@@ -38,59 +38,59 @@
 #             return self.quick_sort([x for x in arr[1:] if x < pivot]) + [pivot] + self.quick_sort([x for x in arr[1:] if x >= pivot])
 
 
-# class Solution:
-#     def quick_sort(self, list):
-#         # list = list[:]
-#         n = len(list)
-
-#         def partition(list, start, end):
-#             i = start - 1
-#             pivot = list[end]
-#             for j in range(start, end):
-#                 if list[j] < pivot:
-#                     i = i + 1
-#                     list[i], list[j] = list[j], list[i]
-#             list[i + 1], list[end] = list[end], list[i + 1]
-#             return i + 1
-
-#         def sort(list, start, end):
-#             if start >= end:
-#                 return
-#             p = partition(list, start, end)
-#             sort(list, start, p - 1)
-#             sort(list, p + 1, end)
-
-#         sort(list, 0, n - 1)
-#         return list
-
-
-# print(Solution().quick_sort([9, 1, 2, 5, 8, 3, 4, 7, 10, 6]))
-
-
-# C 语言版本类似的
 class Solution:
     def quick_sort(self, list):
+        # list = list[:]
         n = len(list)
 
-        def partitons(list, left, right):
-            pivot = list[left]
-            while left < right:
-                while left < right and list[right] >= pivot:
-                    right -= 1
-                list[left] = list[right]
-                while left < right and list[left] <= pivot:
-                    left += 1
-                list[right] = list[left]
-            list[left] = pivot
-            return left
+        def partition(list, start, end):
+            i = start - 1
+            pivot = list[end]
+            for j in range(start, end):
+                if list[j] < pivot:
+                    i = i + 1
+                    list[i], list[j] = list[j], list[i]
+            list[i + 1], list[end] = list[end], list[i + 1]
+            return i + 1
 
-        def q_sort(list, left, right):
-            if left < right:
-                p = partitons(list, left, right)
-                q_sort(list, left, p - 1)
-                q_sort(list, p + 1, right)
-        q_sort(list, 0, n - 1)
+        def sort(list, start, end):
+            if start >= end:
+                return
+            p = partition(list, start, end)
+            sort(list, start, p - 1)
+            sort(list, p + 1, end)
+
+        sort(list, 0, n - 1)
         return list
 
 
-print(Solution().quick_sort([5, 9, 1, 11, 6, 7, 2, 4]))
+print(Solution().quick_sort([9, 1, 2, 5, 8, 3, 4, 7, 10, 6]))
+
+
+#  pivot 取第一个语言版本类似的
+# class Solution:
+#     def quick_sort(self, list):
+#         n = len(list)
+
+#         def partitons(list, left, right):
+#             pivot = list[left]
+#             while left < right:
+#                 while left < right and list[right] >= pivot:
+#                     right -= 1
+#                 list[left] = list[right]
+#                 while left < right and list[left] <= pivot:
+#                     left += 1
+#                 list[right] = list[left]
+#             list[left] = pivot
+#             return left
+
+#         def q_sort(list, left, right):
+#             if left < right:
+#                 p = partitons(list, left, right)
+#                 q_sort(list, left, p - 1)
+#                 q_sort(list, p + 1, right)
+#         q_sort(list, 0, n - 1)
+#         return list
+
+
+# print(Solution().quick_sort([5, 9, 1, 11, 6, 7, 2, 4]))
