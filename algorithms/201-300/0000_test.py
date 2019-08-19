@@ -141,3 +141,5 @@
 
 
 print(list(zip('abb', 'egg')))
+
+# print(list(zip(*zip('abb', 'egg'))))

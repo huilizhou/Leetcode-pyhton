@@ -92,10 +92,21 @@
 # ver1 = [int(token) for token in version1.split(".")]
 # print(ver1)
 
-s = 'abcdac'
+# s = 'abcdac'
 # print(s[:2])
 # print(s[2 - 1::-1])
 # print(s[2:])
 # print(s[:2 - 1:-1])
-print(s[:len(s)])
-print(s[len(s):])
+# print(s[:len(s)])
+# print(s[len(s):])
+
+
+# a = (1, 2, [1, 2, 3], 5)
+# print(a)
+# print(id(a[2]))
+# print(id(a[2][0]))
+# print('-----')
+# a[2][0] = 3
+# print(id(a[2]))
+# print(id(a[2][0]))
+# print(a)
