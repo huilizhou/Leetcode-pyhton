@@ -16,8 +16,8 @@
 
 class Solution:
     def binary_search(self, list, key):
-        left, right = 0, len(list)
-        while left < right:
+        left, right = 0, len(list) - 1
+        while left <= right:
             mid = (left + right) // 2
             if list[mid] > key:
                 right = mid - 1
@@ -28,4 +28,4 @@ class Solution:
         return False
 
 
-print(Solution().binary_search([1, 3, 5, 7, 8, 9], 6))
+print(Solution().binary_search([1, 3, 5, 7, 8, 9], 1))
