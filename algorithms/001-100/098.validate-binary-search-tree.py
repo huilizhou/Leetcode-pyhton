@@ -9,13 +9,13 @@ class TreeNode:
         self.right = None
 
 
-class Solution:
+'''class Solution:
     def isValidBST(self, root):
         """
         :type root: TreeNode
         :rtype: bool
         """
-        # 我的想法
+        # 我的想法，递归
         return self.validBST(root, -2**32, 2**32 - 1)
 
     def validBST(self, root, small, large):
@@ -25,7 +25,7 @@ class Solution:
             return False
         return self.validBST(root.left, small, root.val) and self.validBST(root.right, root.val, large)
 
-        # 人家的解法
+        # 人家的解法，迭代
         # stack = []
         # prev = None
         # while root or stack:
@@ -38,6 +38,30 @@ class Solution:
         #     prev = root
         #     root = root.right
         # return True
+'''
+
+
+class Solution:
+    def isValidBST(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        def helper(node, lower=float('-inf'), upper=float('inf')):
+            if not node:
+                return True
+
+            val = node.val
+            if val <= lower or val >= upper:
+                return False
+
+            if not helper(node.right, val, upper):
+                return False
+            if not helper(node.left, lower, val):
+                return False
+            return True
+
+        return helper(root)
 
 
 tree = TreeNode(4)

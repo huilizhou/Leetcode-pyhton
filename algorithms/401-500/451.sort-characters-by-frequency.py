@@ -5,25 +5,34 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        # dic = {}
-        # res = ''
-        # for i in s:
-        #     if i in dic:
-        #         dic[i] += 1
-        #     else:
-        #         dic[i] = 1
-        # while dic:
-        #     tmp = max(dic, key=dic.get)
-        #     res += tmp * dic[tmp]
-        #     dic.pop(tmp)
+
+        # # 人家的解法，用库函数
+        # import collections
+        # cn = collections.Counter(s)
+        # res = ""
+        # for k, v in cn.most_common():
+        #     res += k * v
         # return res
 
-        # 人家的解法
-        import collections
-        cn = collections.Counter(s)
-        res = ""
-        for k, v in cn.most_common():
-            res += k * v
+        # 人家的解法，排序部分用桶排序。/也可以用对排序
+        # import collections
+        # log = dict(collections.Counter(s))
+        # buckets = [[] for i in range(len(s) + 1)]  # 桶排序
+        # for k, v in log.items():
+        #     buckets[v].append(k * v)
+        # res = ''
+        # for i in buckets[::-1]:
+        #     res += ''.join(i)
+        # return res
+
+        # 我的写法
+        dic = {}
+        for i in s:
+            dic[i] = dic.get(i, 0) + 1
+        m = sorted(dic.items(), key=lambda x: x[1], reverse=True)
+        res = ''
+        for i in m:
+            res += i[0] * i[1]
         return res
 
 
