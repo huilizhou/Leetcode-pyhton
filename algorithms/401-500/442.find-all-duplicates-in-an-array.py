@@ -21,7 +21,6 @@ class Solution(object):
                 nums[abs(n) - 1] *= -1
             else:
                 res.append(abs(n))
-
         return res
 
 
