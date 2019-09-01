@@ -30,3 +30,7 @@
 # dic = {'a': 1, 'b': 2, 'c': 1}
 # for k, v in dic.items():
 #     print(k, v)
+
+
+L = [1, 2, 3, 5]
+print(sum(L) % 2)
