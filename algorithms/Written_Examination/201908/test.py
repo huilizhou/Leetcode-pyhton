@@ -13,8 +13,10 @@
 #     else:
 #         break
 
-s = "12 - 2 ="
-s = s.replace('-', '').strip()
-i = s.index('=')
-print(i)
-print(s)
+# s = "12 - 2 ="
+# s = s.replace('-', '').strip()
+# i = s.index('=')
+# print(i)
+# print(s)
+
+int('  8')
