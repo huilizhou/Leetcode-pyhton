@@ -32,3 +32,17 @@ class Solution(object):
             if slow == fast:
                 return True
         return False
+
+        # # hash表
+        # if not head:
+        #     return False
+
+        # target = {head}
+        # head = head.next
+        # while head:
+        #     if head in target:
+        #         return True
+        #     else:
+        #         target.add(head)
+        #         head = head.next
+        # return False
