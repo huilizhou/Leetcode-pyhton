@@ -19,4 +19,16 @@
 # print(i)
 # print(s)
 
-int('  8')
+# int('  8')
+
+
+# a = [1, 4, 3]
+# b = [1, 2, 3]
+# m = list(zip(a, b))
+# m.sort(reverse=True)
+# print(m[:2])
+
+
+ls = ['a', 'aa', 'ab', 'ac', 'bc']
+ls.sort()
+print(ls)
