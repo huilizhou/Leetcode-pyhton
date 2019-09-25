@@ -29,6 +29,9 @@
 # print(m[:2])
 
 
-ls = ['a', 'aa', 'ab', 'ac', 'bc']
-ls.sort()
-print(ls)
+# ls = ['a', 'aa', 'ab', 'ac', 'bc']
+# ls.sort()
+# print(ls)
+
+# if None:
+#     print('hello')
