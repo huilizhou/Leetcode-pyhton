@@ -8,6 +8,7 @@ class Solution:
         """
 
         # 别人的解法，numRows==0，开始step直接加一，numRows，step直接减一，很厉害。
+        # 按行排序后在join
         if numRows == 1 or numRows >= len(s):
             return s
         L = [''] * numRows

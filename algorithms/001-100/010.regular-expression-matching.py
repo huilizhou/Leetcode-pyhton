@@ -1,3 +1,4 @@
+# 正则表达式匹配
 class Solution:
     def isMatch(self, s, p):
         """
@@ -5,7 +6,7 @@ class Solution:
         :type p: str
         :rtype: bool
         """
-        # 人家的解法，20181119.
+
         if not p:
             return not s
 
