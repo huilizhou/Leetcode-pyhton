@@ -1,3 +1,4 @@
+# 字符串转整数
 class Solution(object):
     def myAtoi(self, str):
         """
@@ -5,17 +6,18 @@ class Solution(object):
         :rtype: int
         """
         ans = list(str.strip())
-        print(ans)
+        # print(ans)
         if len(ans) == 0:
             return 0
         sign = -1 if ans[0] == '-' else 1
         if ans[0] in ['-', '+']:
             del ans[0]
-        print(ans)
+        # print(ans)
         res = 0
         i = 0
         while i < len(ans) and ans[i].isdigit():
-            res = res * 10 + ord(ans[i]) - ord('0')
+            # res = res * 10 + ord(ans[i]) - ord('0')
+            res = res * 10 + int(ans[i])
             i += 1
         return max(-2**31, min(sign * res, 2**31 - 1))
 

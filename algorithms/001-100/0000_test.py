@@ -293,6 +293,15 @@
 # print(list(itertools.combinations([1, 2, 3], 2)))
 
 
-import itertools
+# import itertools
 
-print(list(itertools.permutations([], 0)))
+# print(list(itertools.permutations([], 0)))
+
+
+# s = '12bb3nn4'
+# print(s[-1:1])
+
+
+s = ["flower", "flow", "flight"]
+print(list(zip(*s)))
+print(list(zip(s)))
