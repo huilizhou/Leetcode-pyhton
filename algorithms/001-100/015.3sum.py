@@ -39,6 +39,7 @@ class Solution(object):
         if 0 in nums_hash and nums_hash[0] >= 3:
             result.append([0, 0, 0])
 
+        # 去除重复值了
         pos_list = [i for i in nums_hash if i >= 0]
         neg_list = [i for i in nums_hash if i < 0]
 
@@ -48,7 +49,7 @@ class Solution(object):
                 if dif in nums_hash:
                     if dif in(i, j) and nums_hash[dif] >= 2:
                         result.append([i, j, dif])
-                    if dif < j or dif > i:
+                    elif dif < j or dif > i:
                         result.append([i, j, dif])
         return result
 

@@ -304,4 +304,4 @@
 
 s = ["flower", "flow", "flight"]
 print(list(zip(*s)))
-print(list(zip(s)))
+# print(list(zip(s)))
