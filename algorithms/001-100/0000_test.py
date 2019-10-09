@@ -302,6 +302,28 @@
 # print(s[-1:1])
 
 
-s = ["flower", "flow", "flight"]
-print(list(zip(*s)))
-# print(list(zip(s)))
+# s = ["flower", "flow", "flight"]
+# print(list(zip(*s)))
+# # print(list(zip(s)))
+
+
+# def joseph(n,m):
+#     if n==1:
+#         return n
+#     return (joseph(n-1,m)+m-1)%n+1
+
+# print(joseph(42,3))
+
+def solve(n, m):
+    # 自动身成列表,从0开始 到n-1
+    list = [_ for _ in range(n)]
+    m -= 1
+    k = m % n
+    while(len(list) > 1):
+        print(list[k])
+        del list[k]
+        k = (k + m) % len(list)
+    return list[0]
+
+
+print(solve(42, 3))

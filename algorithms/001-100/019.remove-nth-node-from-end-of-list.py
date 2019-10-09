@@ -27,16 +27,15 @@ class Solution:
 
         dummy = ListNode(0)
         dummy.next = head
-        first = dummy
-        second = dummy
+        fast = dummy
+        slow = dummy
 
         for _ in range(n + 1):
-            first = first.next
-        while first != None:
-            first = first.next
-            second = second.next
-
-        second.next = second.next.next
+            fast = fast.next
+        while fast != None:
+            fast = fast.next
+            slow = slow.next
+        slow.next = slow.next.next
         return dummy.next
 
 

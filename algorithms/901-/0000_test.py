@@ -127,3 +127,30 @@
 # for i in L:
 #     dic[i] = dic.get(i, 0) + 1
 # print(dic)
+
+
+class Solution:
+    def merge_sort(self, list):
+        ''' 合并 '''
+        def merge(left, right):
+            result = []
+            while left and right:
+                if left[0] <= right[0]:
+                    result.append(left.pop(0))
+                else:
+                    result.append(right.pop(0))
+            if left:
+                result += left
+            if right:
+                result += right
+            return result
+
+        if len(list) <= 1:
+            return list
+        middle = len(list) // 2
+        left = self.merge_sort(list[:middle])
+        right = self.merge_sort(list[middle:])
+        return merge(left, right)
+
+
+print(Solution().merge_sort([1,9,2,3,4,6,5,7]))
