@@ -314,16 +314,47 @@
 
 # print(joseph(42,3))
 
-def solve(n, m):
-    # 自动身成列表,从0开始 到n-1
-    list = [_ for _ in range(n)]
-    m -= 1
-    k = m % n
-    while(len(list) > 1):
-        print(list[k])
-        del list[k]
-        k = (k + m) % len(list)
-    return list[0]
+# def solve(n, m):
+#     # 自动身成列表,从0开始 到n-1
+#     list = [_ for _ in range(n)]
+#     m -= 1
+#     k = m % n
+#     while(len(list) > 1):
+#         print(list[k])
+#         del list[k]
+#         k = (k + m) % len(list)
+#     return list[0]
 
 
-print(solve(42, 3))
+# print(solve(5, 2))
+
+
+# def josephus(n, k):
+#     if k == 1:
+#         print(n)
+#         return
+#     p = 0
+#     people = list(range(1, n + 1))
+#     while True:
+#         if len(people) == 1:
+#             break
+#         p = (p + (k - 1)) % len(people)
+#         del people[p]
+#     print(people[0])
+
+
+# if __name__ == '__main__':
+#     N = int(input())
+#     josephus(N, 3)
+
+
+s = input()
+num, char, d = 0, 0, 0
+for i in s:
+    if i.isdigit():
+        num = num + 1
+    elif i.isalpha():
+        char = char + 1
+    else:
+        d = d + 1
+print(num, char, d)
