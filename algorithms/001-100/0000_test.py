@@ -348,13 +348,38 @@
 #     josephus(N, 3)
 
 
-s = input()
-num, char, d = 0, 0, 0
-for i in s:
-    if i.isdigit():
-        num = num + 1
-    elif i.isalpha():
-        char = char + 1
+# s = input()
+# num, char, d = 0, 0, 0
+# for i in s:
+#     if i.isdigit():
+#         num = num + 1
+#     elif i.isalpha():
+#         char = char + 1
+#     else:
+#         d = d + 1
+# print(num, char, d)
+
+
+nums = [1, - 2, 3, 4, 10, 9, -5]
+nums_sort = sorted(nums)
+count = 0
+res = 1
+for i in nums_sort:
+    if i < 0:
+        count += 1
     else:
-        d = d + 1
-print(num, char, d)
+        break
+
+if count % 2 != 0:
+    for j in range(1, len(nums_sort)):
+        res *= nums_sort[j]
+elif count % 2 == 0:
+    for k in range(count):
+        print(nums_sort[k])
+        res *= nums_sort[k]
+    for k in range(count + 1, len(nums_sort)):
+        print(nums_sort[k])
+        res *= nums_sort[k]
+
+
+print(res)
