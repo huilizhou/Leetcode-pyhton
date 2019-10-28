@@ -360,7 +360,7 @@
 # print(num, char, d)
 
 
-nums = [1, - 2, 3, 4, 10, 9, -5]
+nums = [1, - 2, 3, 4, 10, 9, -5, -10]
 nums_sort = sorted(nums)
 count = 0
 res = 1
@@ -371,14 +371,18 @@ for i in nums_sort:
         break
 
 if count % 2 != 0:
-    for j in range(1, len(nums_sort)):
+    for j in range(count - 1):
+        # print(nums_sort[j])
+        res *= nums_sort[j]
+    for j in range(count, len(nums_sort)):
+        # print(nums_sort[j])
         res *= nums_sort[j]
 elif count % 2 == 0:
     for k in range(count):
-        print(nums_sort[k])
+        # print(nums_sort[k])
         res *= nums_sort[k]
     for k in range(count + 1, len(nums_sort)):
-        print(nums_sort[k])
+        # print(nums_sort[k])
         res *= nums_sort[k]
 
 
